@@ -1,0 +1,93 @@
+/*
+## Rating
+```
+	<div class="rating"></div>
+```
+
+## Rating - Values
+```
+	<div class="rating val_1"></div>
+	<div class="rating val_2"></div>
+	<div class="rating val_3"></div>
+	<div class="rating val_4"></div>
+	<div class="rating val_5"></div>
+```
+
+# Icons
+
+## Rating - Circle
+```
+	<div class="rating circle"></div>
+	<div class="rating circle val_3"></div>
+```
+
+## Rating - Languages
+```
+	<div class="rating lang"></div>
+	<div class="rating lang val_3"></div>
+```
+
+## Rating - Heart
+```
+	<div class="rating heart"></div>
+	<div class="rating heart val_3"></div>
+```
+
+## Rating - Face
+```
+	<div class="rating face"></div>
+	<div class="rating face val_3"></div>
+```
+*/
+
+.rating{
+	@iconsNum : 5;
+	@iconsSize: 1em;
+	@iconsGap : 0.5em;
+
+	position : relative;
+	height   : 1em;
+	width    : ((@iconsSize + @iconsGap) * @iconsNum) -  @iconsGap;
+	font-size: 16px;
+	color    : @themeColor_1;
+	.font_icons();
+	&:before,
+	&:after{
+		position      : absolute;
+		top           : 0;
+		left          : 0;
+		font-size     : @iconsSize;
+		letter-spacing: @iconsGap;
+		overflow      : hidden;
+	}
+
+	.rating_loopValue(@iconsNum);
+
+	.rating_icons(@iconsNum);
+	&.circle{ .rating_icons(@iconsNum; '\f111'; '\f10c';); }
+	&.lang  { .rating_icons(@iconsNum; '\f075'; '\f0e5';); }
+	&.heart { .rating_icons(@iconsNum; '\f004'; '\f004';); }
+	&.face  { .rating_icons(@iconsNum; '\f118'; '\f119';); }
+}
+
+
+//---------------------
+//-------MIXINS--------
+//---------------------
+.rating_loopValue(@n, @i: 1) when (@i =< @n - 1) {
+	&.val_@{i}:after{
+		width: (@iconsSize * @i) + (@iconsGap * (@i - 1));
+	}
+  .rating_loopValue(@n, (@i + 1));
+}
+
+
+
+.rating_icons(@iconsNum; @icon:'\f005' ; @icon-o:'\f006';){
+	&:before{ .rating_icons_content(@iconsNum, @icon-o);}
+	&:after { .rating_icons_content(@iconsNum, @icon);  }
+}
+.rating_icons_content(@n, @content, @i: 1, @content_ini: @content) when (@i =< @n) {
+		content : '@{content}';
+  .rating_icons_content(@n, '@{content}@{content_ini}', (@i + 1), @content_ini);
+}

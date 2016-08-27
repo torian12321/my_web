@@ -1,0 +1,19 @@
+{
+	"name"        : "webTemplate_package",
+	"author"      : "Aitor",
+	"version"     : "1.0.0",
+    "dependencies": {
+		"gulp"             : "*",
+		"gulp-less"        : "*",
+		"gulp-clean-css"   : "*",
+		"gulp-autoprefixer": "*",
+		"gulp-autoprefixer": "*",
+		"gulp-php2html"    : "*",
+		"gulp-concat"      : "*",
+		"gulp-uglify"      : "*",
+		"gulp-php2html"    : "*",
+		"gulp-htmlmin"     : "*",
+		"gulp-clean"       : "*",
+		"gulp-imagemin"    : "*"
+    }
+}

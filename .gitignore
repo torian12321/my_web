@@ -1,0 +1,5 @@
+dist/
+node_modules/
+app/src/css/*
+app/src/js/app.js
+app/src/js/libs.js
