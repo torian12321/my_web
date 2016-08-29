@@ -1,23 +1,36 @@
 /*
-## Card - Users
+## Avatar
 ```
 	<div class="avatar" style="background-image: url(http://placehold.it/200x200);"></div>
+```
+
+## Avatar - small
+```
+	<div class="avatar small" style="background-image: url(http://placehold.it/200x200);"></div>
 ```
 */
 
 
 .avatar{
 	@size : 250px;
-	@color: @themeColor_2;
+	@color: @themeColor_1;
 
 	height: @size;
 	width : @size;
 	border: solid 10px @color;
-	.BW(10%);
+	.BW(20%);
 	.transition();
 	.rounded(50%);
 	.background-img('@{imgDir}/avatar.jpg'; center bottom);
 	&:hover{
 		.BW(0);
+	}
+
+	&.small{
+		@size : 150px;
+
+		height      : @size;
+		width       : @size;
+		border-width: 5px;
 	}
 }

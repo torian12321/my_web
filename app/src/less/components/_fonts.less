@@ -19,28 +19,6 @@
 	<h6 class="sec">Heading 6</h6>
 ```
 
-## Lists - ul
-```
-<ul>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3</li>
-	<li>List Item 4</li>
-	<li>List Item 5</li>
-</ul>
-```
-
-## Lists - ol
-```
-<ol>
-	<li>List Item 1</li>
-	<li>List Item 2</li>
-	<li>List Item 3</li>
-	<li>List Item 4</li>
-	<li>List Item 5</li>
-</ol>
-```
-
 ## Aligns
 Different align examples
 ```
@@ -95,7 +73,6 @@ h6{
 }
 h1{
 	font-size     : 2em;
-	text-transform: uppercase;
 	.font-bold();
 }
 h2{
@@ -117,22 +94,6 @@ strong{
 }
 blockquote{
 
-}
-ol li{
-	@ballSize: 6px;
-
-	position   : relative;
-	margin-left: @ballSize + 10;
-	&:before{
-		content   : '';
-		position  : absolute;
-		left      : -1 * (@ballSize + 10);
-		top       : 6px;
-		height    : @ballSize;
-		width     : @ballSize;
-		background: @themeColor_2;
-		.rounded(50%);
-	}
 }
 
 .smart-color{

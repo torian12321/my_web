@@ -1,0 +1,52 @@
+/*
+## Menu
+```
+	<div class="menu-closer"></div>
+  <div class="menu-mask active"></div>
+```
+*/
+
+@menu_z: 500;
+
+.menu-closer{
+  @size : 60px;
+  @color: @red;
+
+  position  : fixed;
+  right     : 20px;
+  top       : 20px;
+  width     : 10vw;
+  height    : 10vw;
+  max-width : @size;
+  max-height: @size;
+  background: @color;
+  color     : @white;
+  cursor    : pointer;
+  z-index   : @menu_z + 10;
+  .rounded(50%);
+  .shadow();
+  .transition();
+  &:hover{
+    background: darken(@color, 5%);
+  }
+}
+
+
+.menu-mask{
+  position  : fixed;
+  top       : 0;
+  right     : 0;
+  height    : 0;
+  width     : 0;
+  background: fadeout(@black, 20%);
+  .rounded(50%);
+  .transition();
+  &.active{
+    @size: 250vmax;
+
+    top   : -@size / 2;
+    right : -@size / 2;
+    width : @size;
+    height: @size;
+  }
+}
