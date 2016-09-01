@@ -10,6 +10,9 @@
 
 .menu-closer{
   @size : 60px;
+  @bar_width : @size * 0.55;
+  @bar_height: @size * 0.075;
+  @bar_gutter : @size * 0.15;
   @color: @red;
 
   position  : fixed;
@@ -22,31 +25,89 @@
   background: @color;
   color     : @white;
   cursor    : pointer;
-  z-index   : @menu_z + 10;
+  z-index   : @menu_z;
   .rounded(50%);
-  .shadow();
   .transition();
+  &:before,
+  &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      left: (@size - @bar_width) / 2;
+      width  : @bar_width;
+  }
+  &:before{
+      top: (@size - @bar_height) / 2;
+      height: @bar_height;
+      background: @blue;
+  }
+  &:after{
+      top         : (@size - ((@bar_height * 3) + (@bar_gutter *2))) / 2;
+      border      : solid @green @bar_height;
+      border-left : none;
+      border-right: none;
+
+      height:  (@bar_gutter * 2) + @bar_height;
+  }
   &:hover{
     background: darken(@color, 5%);
   }
 }
 
 
-.menu-mask{
-  position  : fixed;
-  top       : 0;
-  right     : 0;
-  height    : 0;
-  width     : 0;
-  background: fadeout(@black, 20%);
-  .rounded(50%);
-  .transition();
-  &.active{
-    @size: 250vmax;
+// http://codepen.io/jeffmccarthyesq/pen/LEEKLZ?editors=0100
+.wrap {
+    position  : fixed;
+    overflow  : hidden;
+    top       : 0%;
+    width     : 500px;
+    height    : 100vh;
+    left      : 0;
+    padding   : 20px 50px;
+    display   : block;
+    visibility: hidden;
+    z-index   : @menu_z;
+    transform : translate(-50px);
+    transition: all 0.5s;
+    .content {
+        opacity: 0;
+    }
+    &:before {
+        content   : "";
+        position  : absolute;
+        width     : 0;
+        height    : 0;
+        background: #bbb;
+        left      : 0;
+        top       : 90%;
+        -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        .rounded(50%);
+    }
+    &.active {
+        display   : block;
+        visibility: visible;
+        box-shadow: 2px 3px 16px silver;
+        transform : translateZ(0px);
+        transition: all 0.5s;
+        .content {
+            position: relative;
+            z-index : 1;
+            opacity : 1;
+            transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        &:before {
+            @size: 200vmax;
 
-    top   : -@size / 2;
-    right : -@size / 2;
-    width : @size;
-    height: @size;
-  }
+            display    : block;
+            top        : 50%;
+            left       : 0;
+            height     : @size;
+            width      : @size;
+            margin-left: -@size / 2;
+            margin-top : -@size / 2;
+            -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+    }
 }

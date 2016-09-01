@@ -35,3 +35,9 @@ $('.tabs-header label').click(function(){
     $(this).addClass('active');
     $(this).siblings().removeClass('active');
 });
+
+$('.menu-closer').click(function(){
+	console.log('abc');
+	$('.menu-mask').toggleClass('active');
+	$('.wrap').toggleClass('active');
+});
