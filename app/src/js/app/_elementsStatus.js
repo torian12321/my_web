@@ -36,8 +36,7 @@ $('.tabs-header label').click(function(){
     $(this).siblings().removeClass('active');
 });
 
-$('.menu-closer').click(function(){
-	console.log('abc');
-	$('.menu-mask').toggleClass('active');
-	$('.wrap').toggleClass('active');
+$('.menu-opener').click(function(){
+    $('.menu-opener').toggleClass('active');
+    $('.menu-wrap').toggleClass('active');
 });

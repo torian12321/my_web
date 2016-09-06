@@ -42,30 +42,14 @@ sayHello = function(console_text, color){
 
 
 // Add animaitions to the website title (browser tab)
-animateTitle = function(){
-	var
-	index     = 0,
-	title     = document.title,
-	animation = [
-		'o--',
-		'-o-',
-		'--o',
-		'-o-'
-	]
-
-	setInterval(function(){
-		document.title = animation[index % animation.length] + title + animation[index % animation.length];
-		index++;
-    }, 250);
-},
 animateTitle_pet = function(){
 	var
 	index        = 0,
 	title_window = 10,
 	title_void   = Array((title_window + 1)).join('-'),
-	title        = title_void + document.title + title_void,
+	title        = title_void + _doc.title + title_void,
 	title_length = title.length,
-	title_focus  = title_window, 
+	title_focus  = title_window,
 	pet          = [
 		"┏(^-^)┓",
 		"┗(^-^)┓",
@@ -77,14 +61,15 @@ animateTitle_pet = function(){
 		"┏(^o^)┓",
 		"┗(^o^)┛",
 		"┏(^o^)┓"
-	];
+	],
+    pet_length = pet.length;
 
     setInterval(function(){
     	title_focus = (title_focus != title_length) ? title_focus + 1 : title_window;
     	index++;
 
-		document.title =
-			pet[index % pet.length] +
+		_doc.title =
+			pet[index % pet_length] +
 			'  '
 			+ title.substring((title_focus - title_window), title_focus);
     }, 400);
