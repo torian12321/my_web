@@ -24,7 +24,7 @@ define([
 				stylePage.render();
 
         // Custom function from our main project.
-        require(['project_dir/app/main']);
+        require(['project_dir/app']);
 			});
 		});
 		router.on('route:defaultAction', function (actions) {
