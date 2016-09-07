@@ -37,23 +37,21 @@ To change the menu status, add class 'active' to it
 @menu_w: 350px;
 
 .menu-opener{
-  @size       : 60px;
+  @size       : 50px;
   @bar_w      : @size * 0.55;
   @bar_h      : @size * 0.05;
   @bar_gutter : @size * 0.15;
   @color      : @red;
 
-  position  : fixed;
-  right     : 20px;
-  top       : 20px;
-  width     : 10vw;
-  height    : 10vw;
-  max-width : @size;
-  max-height: @size;
-  background: @color;
-  cursor    : pointer;
-  z-index   : @menu_z;
-  overflow  : hidden;
+  position   : fixed;
+  right      : 20px;
+  top        : 20px;
+  width      : @size;
+  height     : @size;
+  background : @color;
+  cursor     : pointer;
+  z-index    : @menu_z;
+  overflow   : hidden;
   .rounded(50%);
   .shadow();
   div{
