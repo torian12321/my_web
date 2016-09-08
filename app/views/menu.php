@@ -9,11 +9,12 @@
     <div class="menu-content">
     <div class="img"></div>
         <ul>
-            <li>Option 1</li>
-            <li>Option 2</li>
-            <li>Option 3</li>
-            <li>Option 4</li>
-            <li>Option 5</li>
+            <li><a href="#home"      class="home"     >Home</a></li>
+            <li><a href="#profile"   class="profile"  >Profile</a></li>
+            <li><a href="#skills"    class="home"     >Skills</a></li>
+            <li><a href="#portfolio" class="portfolio">Portfolio</a></li>
+            <li><a href="#contact"   class="contact"  >Contact</a></li>
+
         </ul>
     </div>
 </div>

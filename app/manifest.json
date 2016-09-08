@@ -1,6 +1,6 @@
 {
-  "name"            : "Aitor website",
-  "short_name"      : "Aitor CV",
+  "name"            : "Aitor",
+  "short_name"      : "Aitor",
   "description"     : "Interactive resume",
   "theme_color"     : "#163b63",
   "background_color": "#FFFFFF",

@@ -33,10 +33,16 @@
 	<div class="rating heart val_3"></div>
 ```
 
-## Rating - Face
+## Rating - Cog
 ```
-	<div class="rating face"></div>
-	<div class="rating face val_3"></div>
+	<div class="rating cog"></div>
+	<div class="rating cog val_3"></div>
+```
+
+## Rating - Energy
+```
+	<div class="rating energy"></div>
+	<div class="rating energy val_3"></div>
 ```
 */
 
@@ -53,12 +59,13 @@
 	//.rating_loopValue(@iconsNum);
 	.rating_icons();
 	&.circle{ .rating_icons('\f111'; '\f10c';); }
-	&.lang  { .rating_icons('\f075'; '\f0e5';); }
-	&.heart { .rating_icons('\f004'; '\f004';); }
-	&.face  { .rating_icons('\f118'; '\f119';); }
+	&.lang  { .rating_icons('\e812'; '\f0e5';); }
+	&.heart { .rating_icons('\E80E'; '\E80F';); }
+	&.cog   { .rating_icons('\E80A'; '\E81C';); }
+    &.energy{ .rating_icons('\E81E'; '\E81D';); }
 }
 
-.rating_icons(@icon:'\f005' ; @icon-o:'\f006';){
+.rating_icons(@icon:'\E810' ; @icon-o:'\e807';){
 	&:before,
 	&.val_0:before{ content: '@{icon-o}@{icon-o}@{icon-o}@{icon-o}@{icon-o}';}
 	&.val_1:before{ content: '@{icon}@{icon-o}@{icon-o}@{icon-o}@{icon-o}';}
