@@ -75,45 +75,43 @@
 .form-check-icon{
 	@size : @inputHeight;
 
-	& when (@fontAwesome = true) {
-		label:before{color: @colorState_disable}
-		label:after {color: @themeColor_1}
+	label:before{color: @colorState_disable}
+	label:after {color: @themeColor_1}
 
-		& when (@firstLoad = true){
-			label{
-				position       : relative;
-				display        : block;
-				width          : @size;
-				height         : @size;
-				cursor         : pointer;
-				transform-style: preserve-3d;
-				.transition(@property: transform;);
-				&:after,
-				&:before{
-					position           : absolute;
-					top                : 0;
-					left               : 0;
-					bottom             : 0;
-					right              : 0;
-					text-align         : center;
-					display            : block;
-					font-size          : @size;
-					backface-visibility: hidden;
-					.font_icons();
-				}
-				&:before{
-					content: "\f057";
-				}
-				&:after{
-					content  : "\f058";
-					transform: translate3d(0, 0, 0) rotateY(180deg);
-				}
+	& when (@firstLoad = true){
+		label{
+			position       : relative;
+			display        : block;
+			width          : @size;
+			height         : @size;
+			cursor         : pointer;
+			transform-style: preserve-3d;
+			.transition(@property: transform;);
+			&:after,
+			&:before{
+				position           : absolute;
+				top                : 0;
+				left               : 0;
+				bottom             : 0;
+				right              : 0;
+				text-align         : center;
+				display            : block;
+				font-size          : @size;
+				backface-visibility: hidden;
+				.font_icons();
 			}
-			input{
-				display: none;
-				&:checked + label{
-					transform: translate3d(0, 0, 0) rotateY(180deg);
-				}
+			&:before{
+				content: "\E806";
+			}
+			&:after{
+				content  : "\E802";
+				transform: translate3d(0, 0, 0) rotateY(180deg);
+			}
+		}
+		input{
+			display: none;
+			&:checked + label{
+				transform: translate3d(0, 0, 0) rotateY(180deg);
 			}
 		}
 	}

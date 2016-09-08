@@ -22,24 +22,22 @@
 	color      : @color;
 	line-height: 1.75;
 	.font_elegant();
-	& when (@fontAwesome = true) {
-		&:before,
-		&:after{
-			content   : '';
-			position  : absolute;
-			top       : -@iconSize * 0.5;
-			font-size : @iconSize;
-			color     : @color;
-			.font_icons();
-		}
-		&:before{ content: '\f10d';	left : 0;}
-		&:after { content: '\f10e'; right: 0;}
+    .author{
+        display   : block;
+        margin-top: 10px;
+        font-size : 0.8em;
+        text-align: right;
+        color     : fadeout(@color, 40%);
+    }
+	&:before,
+	&:after{
+		content   : '';
+		position  : absolute;
+		top       : -@iconSize * 0.5;
+		font-size : @iconSize;
+		color     : @color;
+		.font_icons();
 	}
-	.author{
-		display   : block;
-		margin-top: 10px;
-		font-size : 0.8em;
-		text-align: right;
-		color     : fadeout(@color, 40%);
-	}
+	&:before{ content: '\f10d';	left : 0;}
+	&:after { content: '\f10e'; right: 0;}
 }
