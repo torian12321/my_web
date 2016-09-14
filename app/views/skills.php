@@ -1,4 +1,5 @@
 <section id="skills">
+    <h1>Skills</h1>
 
     <div class="container">
     	<div class="row">
@@ -21,6 +22,7 @@
     				html_skill($iconStyle, 3, 'MySQL');
     				html_skill($iconStyle, 4, 'AJAX');
     				html_skill($iconStyle, 4, 'JSON');
+                    html_skill($iconStyle, 4, 'Gulp');
     			?>
     			<div class="clear"></div>
     		</div>
@@ -53,7 +55,7 @@
 
       </div>
     </div>
-    
+
 </section>
 
 

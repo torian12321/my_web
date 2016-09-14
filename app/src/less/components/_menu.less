@@ -5,7 +5,7 @@
 
 Opener
 ```
-<div class="menu-opener">
+<div class="menu-opener active">
     <div></div>
     <div></div>
     <div></div>
@@ -14,16 +14,20 @@ Opener
 
 Menu
 ```
-<div class="menu-wrap">
+<div class="menu-wrap active">
     <div class="menu-content">
-    <div class="img" style="background-image: url(http://placehold.it/350x200);"></div>
+        <div class="img" style="background-image: url(http://placehold.it/350x200);"></div>
         <ul>
-            <li>Option 1</li>
-            <li>Option 2</li>
-            <li>Option 3</li>
-            <li>Option 4</li>
-            <li>Option 5</li>
+            <li><a href="#" class="home"     >Home</a></li>
+            <li><a href="#" class="bio"      >Bio</a></li>
+            <li><a href="#" class="profile"  >Profile</a></li>
+            <li><a href="#" class="skills"   >Skills</a></li>
+            <li><a href="#" class="portfolio">Portfolio</a></li>
+            <li><a href="#" class="contact"  >Contact</a></li>
         </ul>
+        <div class="menu-footer">
+            Add link <a href="#" class="link">GitHub</a>
+        </div>
     </div>
 </div>
 ```
@@ -34,7 +38,7 @@ To change the menu status, add class 'active' to it
 */
 
 @menu_z: 500;
-@menu_w: 350px;
+@menu_w: 300px;
 
 .menu-opener{
   @size       : 50px;
@@ -50,7 +54,7 @@ To change the menu status, add class 'active' to it
   height     : @size;
   background : @color;
   cursor     : pointer;
-  z-index    : @menu_z;
+  z-index    : @menu_z + 10;
   overflow   : hidden;
   .rounded(50%);
   .shadow();
@@ -86,6 +90,7 @@ To change the menu status, add class 'active' to it
 
 .menu-wrap{
     // http://codepen.io/jeffmccarthyesq/pen/LEEKLZ?editors=0100
+
     position  : fixed;
     overflow  : hidden;
     top       : 0%;
@@ -100,6 +105,7 @@ To change the menu status, add class 'active' to it
     transition: all 0.5s;
     .menu-content{
         opacity: 0;
+        height : 100vh;
     }
     .img{
         width : 100%;
@@ -108,43 +114,75 @@ To change the menu status, add class 'active' to it
         .background-img('@{imgDir}/menu_header.jpg'; center center);
     }
     ul{
-        li{
-            @color_text: fadeout(@black, 30%);
+        @conSize : 30px;
+        @gutter_x: 15px;
+        @gutter_y: 10px;
 
-            position     : relative;
-            padding      : 10px 15px;
-            cursor       : pointer;
-            z-index      : 1;
-            font-size    : 1.5em;
-            color        : @color_text;
-            border-bottom: @color_text solid 1px;
-            font-weight  : bold;
-            .transition( color);
-            &:before{
-                position  : absolute;
-                content   : '';
-                background: @red;
-                top       : 0;
-                bottom    : 0;
-                left      : 0;
-                width     : 5px;
-                z-index   : -1;
-                opacity: 0.8;
-                .transition(width);
+        li{
+            padding: 0;
+            margin: 0;
+            a{
+                @color_text: fadeout(@black, 30%);
+
+                position     : relative;
+                display      : block;
+                padding      :
+                    0
+                    @gutter_x
+                    0
+                    ((@gutter_x * 2) + @conSize);
+                cursor       : pointer;
+                z-index      : 1;
+                font-size    : 1.5em;
+                line-height  : @conSize + (@gutter_y * 2);
+                color        : @color_text;
+                border-bottom: @color_text solid 1px;
+                font-weight  : bold;
+                .transition(color);
+                &:after{
+                    // expandable BG
+                    position  : absolute;
+                    content   : '';
+                    top       : 0;
+                    bottom    : 0;
+                    left      : 0;
+                    width     : 8px;
+                    z-index   : -1;
+                    opacity: 0.8;
+                    .transition(width);
+                }
             }
-            &:nth-child(1):before{ background: @blue; }
-            &:nth-child(2):before{ background: @orange; }
-            &:nth-child(3):before{ background: @purple; }
-            &:nth-child(4):before{ background: @green; }
-            &:nth-child(5):before{ background: @pink; }
-            &:nth-child(6):before{ background: @blue; }
+            &:nth-child(1) a:after{ background: darken(@themeColor_1, 10%); }
+            &:nth-child(2) a:after{ background: darken(@themeColor_1, 15%); }
+            &:nth-child(3) a:after{ background: darken(@themeColor_1, 20%); }
+            &:nth-child(4) a:after{ background: darken(@themeColor_1, 25%); }
+            &:nth-child(5) a:after{ background: darken(@themeColor_1, 30%); }
+            &:nth-child(6) a:after{ background: darken(@themeColor_1, 35%); }
             &.active,
-            &:hover{
-                //background: darken(@white, 20%);
+            &:hover a{
                 color : @white;
-                &:before{
+                &:after{
                     width: 100%;
                 }
+            }
+
+            // Icons
+            a.home:before     {content: '\E820';}
+            a.profile:before  {content: '\E805';}
+            a.bio:before      {content: '\E818';}
+            a.skills:before   {content: '\E800';}
+            a.portfolio:before{content: '\F121';}
+            a.contact:before  {content: '\F0E0';}
+            a:before{
+                position   : absolute;
+                left       : @gutter_x;
+                top        : 0;
+                height     : @conSize;
+                width      : @conSize;
+                font-size  : @conSize * 0.8;
+                line-height: @conSize + (@gutter_y * 2);
+                text-align : center;
+                .font_icons();
             }
         }
     }
@@ -154,7 +192,6 @@ To change the menu status, add class 'active' to it
         position  : absolute;
         width     : 0;
         height    : 0;
-        //background: @turquoise;
         background: darken(@white, 10%);;
         left      : 0;
         top       : 10%;
@@ -190,4 +227,15 @@ To change the menu status, add class 'active' to it
             transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
         }
     }
+}
+
+
+.menu-footer{
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    right      : 0;
+    text-align : center;
+    line-height: 2;
+    background: fadeout(@black, 80%);
 }

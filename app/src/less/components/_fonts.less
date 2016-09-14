@@ -67,13 +67,13 @@ h4,
 h5,
 h6{
 	color: @themeColor_1;
+    .font-bold();
 	&.sec{
 		color: @themeColor_2;
 	}
 }
 h1{
-	font-size     : 2em;
-	.font-bold();
+	font-size : 2em;
 }
 h2{
 	font-size: 1.8em;
@@ -83,6 +83,7 @@ h3{
 }
 
 p{
+    margin    : 20px 0;
 	text-align: justify;
 	.hightline{
 		background: darken(@white, 20%);
@@ -131,7 +132,7 @@ blockquote{
 	.textSelected();
 }
 .textSelected(){
-	background : fadeout(@themeColor_1, 40%);
+	background : fadeout(@pink, 40%);
 	color      : @fontColor_white;
 	text-shadow: none;
 }

@@ -39,18 +39,12 @@ sayHello = function(console_text, color){
 	var css = 'text-shadow: '+ css_shadow +';font-size: 50px; color: '+ color +';';
 	console.log('%c %s', css, '\ud83c\udf10 '+ console_text);
 },
-
-
 // Add animaitions to the website title (browser tab)
 animateTitle_pet = function(){
 	var
-	index        = 0,
-	title_window = 10,
-	title_void   = Array((title_window + 1)).join('-'),
-	title        = title_void + _doc.title + title_void,
-	title_length = title.length,
-	title_focus  = title_window,
-	pet          = [
+    title = _doc.title,
+    index = 0,
+	pet   = [
 		"┏(^-^)┓",
 		"┗(^-^)┓",
 		"┏(^-^)┓",
@@ -65,12 +59,7 @@ animateTitle_pet = function(){
     pet_length = pet.length;
 
     setInterval(function(){
-    	title_focus = (title_focus != title_length) ? title_focus + 1 : title_window;
-    	index++;
-
-		_doc.title =
-			pet[index % pet_length] +
-			'  '
-			+ title.substring((title_focus - title_window), title_focus);
+        index      = (index < pet_length-1) ? (index + 1) : 0;
+		_doc.title = title + pet[index];
     }, 400);
 };

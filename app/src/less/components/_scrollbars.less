@@ -18,9 +18,9 @@ https://css-tricks.com/custom-scrollbars-in-webkit/
 .scrollbars();
 
 .scrollbars(
-    @color_main : @themeColor_2;
-    @color_sec  : lighten(@color_main, 30%);
-    @size       : 12px;
+    @color_main : darken( @themeColor_2, 20%);
+    @color_sec  : lighten(@themeColor_2, 20%);
+    @size       : 14px;
     ){
     ::-webkit-scrollbar {
         width : @size;
