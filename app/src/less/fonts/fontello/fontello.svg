@@ -3,10 +3,12 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
 <defs>
-<font id="icon_font" horiz-adv-x="1000" >
-<font-face font-family="icon_font" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="award" unicode="&#xe800;" d="M256 357q-42 91-42 207h-143v-53q0-44 53-91t132-63z m601 154v53h-143q0-116-41-207 79 16 131 63t53 91z m72 71v-71q0-40-24-80t-62-73-97-54-120-25q-23-30-53-53-21-19-29-40t-8-50q0-30 17-51t54-21q42 0 75-25t32-64v-36q0-8-5-13t-13-5h-464q-8 0-13 5t-5 13v36q0 39 33 64t74 25q38 0 55 21t17 51q0 28-8 50t-29 40q-30 23-53 53-64 3-121 25t-96 54-63 73-23 80v71q0 23 16 38t38 16h160v53q0 37 27 63t63 27h321q37 0 63-27t26-63v-53h161q22 0 38-16t16-38z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="down-open" unicode="&#xe801;" d="M939 399l-414-413q-10-11-25-11t-25 11l-414 413q-11 11-11 26t11 25l93 92q10 11 25 11t25-11l296-296 296 296q11 11 25 11t26-11l92-92q11-11 11-25t-11-26z" horiz-adv-x="1000" />
 
 <glyph glyph-name="ok-circled" unicode="&#xe802;" d="M717 440q0 16-10 26l-51 50q-11 11-25 11t-25-11l-228-227-126 126q-11 11-25 11t-25-11l-51-50q-10-10-10-26 0-15 10-25l202-202q10-10 25-10 15 0 26 10l303 303q10 10 10 25z m140-90q0-117-57-215t-156-156-215-58-216 58-155 156-58 215 58 215 155 156 216 58 215-58 156-156 57-215z" horiz-adv-x="857.1" />
 

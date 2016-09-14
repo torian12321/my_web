@@ -1,5 +1,5 @@
 {
-  "name": "icon_font",
+  "name": "fontello",
   "css_prefix_text": "i-",
   "css_use_suffix": false,
   "hinting": true,
@@ -244,6 +244,12 @@
       "uid": "d17030afaecc1e1c22349b99f3c4992a",
       "css": "star-empty",
       "code": 59399,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ccddff8e8670dcd130e3cb55fdfc2fd0",
+      "css": "down-open",
+      "code": 59393,
       "src": "fontawesome"
     }
   ]
