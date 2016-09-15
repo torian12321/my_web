@@ -4,7 +4,7 @@
   "description"     : "Interactive resume",
   "theme_color"     : "#163b63",
   "background_color": "#FFFFFF",
-  "start_url"       : "index.php",
+  "start_url"       : "index.html",
   "start_path"      : "./",
   "display"         : "standalone",
   "orientation"     : "landscape",
