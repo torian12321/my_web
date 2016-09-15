@@ -13,15 +13,20 @@
 .fullHeight{
 	min-height: 100vh;
 }
-.parallax{
-	.background-parallax('@{defImgDir}/header.png');
+.bg_main{
+    background: @themeColor_1;
 }
-
+.bg_sec{
+    background: @themeColor_2;
+}
 
 //---------------------
 //--- General page ----
 //---------------------
 
+#contact{
+    .background-parallax('@{defImgDir}/header.png');
+}
 body{
 	background: @themeColor_BG;
 }

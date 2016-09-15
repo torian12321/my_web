@@ -1,0 +1,73 @@
+/*
+## Contact
+```
+<div style="background: #ccc; padding:20px;">
+	<div class="c-contact">Text</div>
+</div>
+```
+
+## Chanels
+```
+<div style="background: #ccc; padding:20px;">
+    <div class="c-contact codepen" >Codepen</div>
+    <div class="c-contact linkedin">Linkedin</div>
+    <div class="c-contact mail"    >Mail</div>
+    <div class="c-contact git"     >Git</div>
+    <div class="c-contact doc"     >Doc</div>
+</div>
+```
+*/
+
+
+.c-contact{
+    @iconSize: 50px;
+
+    position   : relative;
+    display    : block;
+    height     : @iconSize;
+    margin     : 16px 0;
+    padding    : 0 20px 0 (@iconSize + 20px);
+    font-size  : 16px;
+    line-height: @iconSize;
+    background : fadeout(@white, 50%);
+    color      : @themeColor_1;
+    cursor     : pointer;
+    .font-bold();
+    //.transition(padding);
+    &:before{
+        content   : '';
+        position  : absolute;
+        top       : 100%;
+        bottom    : 0;
+        left      : 0;
+        right     : 0;
+        background: @themeColor_2;
+        opacity   : 0.4;
+        .transition(top);
+    }
+    &:after{
+        position   : absolute;
+        left       : 0;
+        top        : 0;
+        height     : @iconSize;
+        width      : @iconSize;
+        font-size  : @iconSize * 0.6;
+        line-height: @iconSize;
+        text-align : center;
+        background : @themeColor_1;
+        color      : @white;
+        font-weight: normal;
+        .icon('\f0e1');
+    }
+    &:hover{
+        //padding-left: @iconSize + 40px;
+        &:before{
+            top: 0;
+        }
+    }
+    &.codepen:after { content: '\f1cb'; }
+    &.mail:after    { content: '\e81f'; }
+    &.doc:after     { content: '\f1c1'; }
+    &.git:after     { content: '\f09b'; }
+    &.linkedin:after{ content: '\f0e1'; }
+}

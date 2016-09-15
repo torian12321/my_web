@@ -80,20 +80,11 @@
 .font(){
 	font-family: 'Lato', sans-serif;
 }
-.font-light(){
-	font-weight: 100;
-}
 .font-regular(){
 	font-weight: 300;
 }
 .font-bold(){
 	font-weight: 700;
-}
-.font-black(){
-	font-weight: 900;
-}
-.font-italic(){
-	font-style: italic;
 }
 
 //Special
@@ -104,6 +95,10 @@
 }
 .font_icons(){
 	font-family: 'fontello';
+}
+.icon(@code: '\e820'){
+    content: @code;
+    .font_icons();
 }
 
 

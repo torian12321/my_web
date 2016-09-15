@@ -25,7 +25,8 @@ $GLOBALS['dateFormat']  = 'F jS - Y';
 $GLOBALS['themeColor']  = $manifest_data['theme_color'];
 
 //Contact
-//$GLOBALS['contact_phone']   = '';
-//$GLOBALS['contact_twitter'] = '';
-//$GLOBALS['contact_mail']    = '';
+$GLOBALS['contact_email']    = 'aitorpalomares@gmail.com';
+$GLOBALS['contact_linkedin'] = 'https://ie.linkedin.com/in/aitorpalomares';
+$GLOBALS['contact_github']   = 'https://github.com/torian12321?tab=repositories';
+$GLOBALS['contact_codepen']  = 'http://codepen.io/torian12321/';
 ?>
