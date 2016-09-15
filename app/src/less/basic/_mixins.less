@@ -174,8 +174,11 @@
 	-moz-background-size   : @size;
 	-webkit-background-size: @size;
 }
-.background-parallax(@BG-url: '@{defImgDir}/img.png';){
-	background             : url(@BG-url) top right no-repeat fixed;
+.background-parallax(
+    @BG-url   : '@{defImgDir}/img.png';
+    @position : center center;
+    ){
+	background             : url(@BG-url) @position no-repeat fixed;
 
 	background-size        : cover;
 	-moz-background-size   : cover;
