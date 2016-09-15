@@ -27,23 +27,15 @@
     height     : @iconSize;
     margin     : 16px 0;
     padding    : 0 20px 0 (@iconSize + 20px);
-    font-size  : 16px;
+    font-size  : 18px;
     line-height: @iconSize;
-    background : fadeout(@white, 50%);
+    background : fadeout(@white, 40%);
     color      : @themeColor_1;
     cursor     : pointer;
     .font-bold();
-    //.transition(padding);
-    &:before{
-        content   : '';
-        position  : absolute;
-        top       : 100%;
-        bottom    : 0;
-        left      : 0;
-        right     : 0;
-        background: @themeColor_2;
-        opacity   : 0.4;
-        .transition(top);
+    .transition(padding);
+    &:hover{
+        padding-left: @iconSize + 40px;
     }
     &:after{
         position   : absolute;
@@ -58,12 +50,6 @@
         color      : @white;
         font-weight: normal;
         .icon('\f0e1');
-    }
-    &:hover{
-        //padding-left: @iconSize + 40px;
-        &:before{
-            top: 0;
-        }
     }
     &.codepen:after { content: '\f1cb'; }
     &.mail:after    { content: '\e81f'; }

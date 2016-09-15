@@ -56,7 +56,7 @@ smoothScrolling = function() {
     }
 
     var
-    duration = 400,
+    duration = 500,
     pageUrl  = location.hash ? stripHash(location.href) : location.href;
 
     //delegatedLinkHijacking();

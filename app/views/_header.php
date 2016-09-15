@@ -29,7 +29,8 @@
 
 	<link rel="manifest"   href="/manifest.json">
 	<link rel="icon"       type="image/png" href="<?php echo $GLOBALS['iconsDir']; ?>favicon.png">
-	<link rel="stylesheet" type="text/css" 	href="<?php echo $GLOBALS['cssDir']; ?>style.css">
+	<link rel="stylesheet" type="text/css" 	href="<?php echo $GLOBALS['cssDir'];   ?>style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Lobster">
 </head>
 
 
