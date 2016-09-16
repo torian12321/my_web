@@ -23,7 +23,23 @@
 //---------------------
 //--- General page ----
 //---------------------
+#erroPage{
+    background : @white;
+    position   : absolute;;
+    top        : 0;
+    bottom     : 0;
+    left       : 0;
+    right      : 0;
+    padding    : 200px 0;
+    color      : lighten(@black, 50%);
 
+    .pet{
+        display   : block;
+        font-size : 30px;
+        padding   : 50px 0;
+    }
+
+}
 #contact{
     .background-parallax('@{defImgDir}/bg.jpg');
 }
