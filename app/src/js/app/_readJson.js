@@ -1,7 +1,7 @@
 // Reference:
 // https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
 var
-loadJSON = function(file, callback) {   
+loadJSON = function(file, callback) {
     var xobj = new XMLHttpRequest();
 
     xobj.overrideMimeType("application/json");
@@ -12,5 +12,5 @@ loadJSON = function(file, callback) {
             callback(xobj.responseText);
         }
     };
-    xobj.send(null);  
+    xobj.send(null);
 };

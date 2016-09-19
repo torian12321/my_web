@@ -1,7 +1,7 @@
 /*
 ## Inputs
 ```
-<div style="background-color: #eee; padding:20px;">
+<form autocomplete="off" style="background-color: #eee; padding:20px;">
 
     <div class="form-input">
         <input id="input-1" type="text" required>
@@ -13,26 +13,23 @@
         <label for="input-2">Surname</label>
     </div>
 
-</div>
+</fomr>
 ```
 
 ## Text area
 ```
 <div style="background-color: #eee; padding:20px;">
-
     <div class="form-input">
     <textarea id="textarea-1" required></textarea>
     <label for="textarea-1">Description</label>
     </div>
-
 </div>
 ```
-
 */
 
-@color_main  : @themeColor_1;
-@color_sec   : @white;
-@lineSize : 5px;
+@color_main : @themeColor_1;
+@color_sec  : @white;
+@lineSize   : 5px;
 
 
 input{
@@ -40,30 +37,59 @@ input{
 }
 textarea{
 	resize: none;
-	height: 120px;
+	height: 130px;
 }
 
 .form-input{
     position : relative;
     min-width: 200px;
+    position : relative;
+	padding  :  30px 0 0;
 
     input,
     textarea{
         position     : relative;
         width        : 100%;
-    	padding      : 5px;
+    	padding      : 6px 10px;
         border       : none;
     	border-bottom: @themeColor_2 @lineSize solid;
     	color        : @color_main;
         background   : fadeout(@white, 50%);
 
-    	.transition(background);
+        .transition(color);
+        .transition(background);
     	&:-webkit-autofill,
     	&:-webkit-autofill:focus{
         	-webkit-box-shadow: 0 0 0px 1000px @color_sec inset;
     	}
+        &:valid,
+        &:hover{
+            background: fadeout(@white, 20%);
+        }
+        &.filled + label,
+        &:valid  + label,
+		&:focus  + label{
+			top      : @baseFontSize * 0.2;
+            font-size: @baseFontSize * 0.8;
+            &:after{
+                right: 0;
+            }
+		}
     }
+    label{
+		position   : absolute;
+		left       : 10px;
+		top        : 40px;
+		line-height: 30px;
+		color      : @themeColor_1;
+        font-size: @baseFontSize;
+        .font-bold();
+        .transition(top);
+        .transition(font-size);
+        .transition(color);
+	}
 
+    // Bottom line
     &:after{
         content   : '';
         position  : absolute;
@@ -74,17 +100,24 @@ textarea{
         background: @themeColor_1;
         .transition(right);
     }
-    &:hover{
+    &.textArea:after{
+        bottom: 4px;
+    }
+    &:hover:after{
+        right: 0;
+    }
+    &.error{
         input,
-        textarea{
-            background   : @white;
+        textarea,
+        label{
+            color : @colorState_danger;
         }
         &:after{
-            //right: 0;
+            right     : 0;
+            background: @colorState_danger;
         }
     }
 }
-
 
 ::-webkit-input-placeholder { .placeholder(); }
 ::-moz-placeholder 			{ .placeholder(); }
@@ -104,5 +137,70 @@ textarea{
 	}
 	input:disabled&{
 		color: darken(@colorState_disable, 20%);
+	}
+}
+
+
+/*
+# CheckBox - Icon
+```
+<div class="form-check-icon">
+	<input id="CBI-1" type="checkbox" checked>
+	<label for="CBI-1"></label>
+</div>
+
+<div class="form-check-icon">
+	<input id="CBI-2" type="checkbox">
+	<label for="CBI-2"></label>
+</div>
+
+<div class="form-check-icon">
+	<input id="CBI-3" type="checkbox">
+	<label for="CBI-3"></label>
+</div>
+```
+*/
+.form-check-icon{
+	@size : @inputHeight;
+
+	label:before{color: @colorState_disable}
+	label:after {color: @themeColor_1}
+
+	& when (@firstLoad = true){
+		label{
+			position       : relative;
+			display        : block;
+			width          : @size;
+			height         : @size;
+			cursor         : pointer;
+			transform-style: preserve-3d;
+			.transition(@property: transform;);
+			&:after,
+			&:before{
+				position           : absolute;
+				top                : 0;
+				left               : 0;
+				bottom             : 0;
+				right              : 0;
+				text-align         : center;
+				display            : block;
+				font-size          : @size;
+				backface-visibility: hidden;
+				.font_icons();
+			}
+			&:before{
+				content: "\E806";
+			}
+			&:after{
+				content  : "\E802";
+				transform: translate3d(0, 0, 0) rotateY(180deg);
+			}
+		}
+		input{
+			display: none;
+			&:checked + label{
+				transform: translate3d(0, 0, 0) rotateY(180deg);
+			}
+		}
 	}
 }

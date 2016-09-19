@@ -1,3 +1,75 @@
-.card-product{
-	
+/*
+## Product
+Use in the portfolio
+```
+<div class="xs-4 xs-push-2">
+
+    <div class="c-product" style="background-image: url(http://placehold.it/500x300);">
+        <h1>Main title</h1>
+        <span class="desc fixie"></span>
+        <div class="link"></div>
+    </div>
+
+</div>
+```
+*/
+
+.c-product{
+    position: relative;
+	height  : 250px;
+    width   : 100%;
+    margin  : 0 0 50px;
+    overflow: hidden;
+    .BW(50%);
+    .background-img();
+    h1,
+    .desc{
+        position   : absolute;
+        padding    : 0 10px;
+        left       : 0;
+        right      : 0;
+        background : fadeout(@white, 20%);
+    }
+    h1{
+        line-height: 2em;
+        font-size  : 20px;
+        top        : -2em;
+        .transition(top);
+    }
+    .desc{
+        padding: 10px;
+        bottom : -100px;
+        color  : @fontColor_black;
+        .transition(bottom);
+    }
+    .link:after{
+        position   : absolute;
+        top        : 50%;
+        left       : 120%;
+        height     : 2em;
+        width      : 2em;
+        margin     : -1em 0 0 -1em;
+        background : @themeColor_2;
+        color      : @white;
+        text-align : center;
+        line-height: 2em;
+        font-size  : 30px;
+        .shadow();
+        .icon('\e817');
+        .rounded(50%);
+        .transition(left);
+    }
+
+    &:hover{
+        .BW(0);
+        h1{
+            top: 0;
+        }
+        .desc{
+            bottom: 0px;
+        }
+        .link:after{
+            left: 50%;
+        }
+    }
 }

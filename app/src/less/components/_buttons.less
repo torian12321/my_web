@@ -22,16 +22,18 @@
 		position       : relative;
 		min-width      : 100px;
 		padding        : @padding_v @padding_h;
-		font-size      : 14px;
 		cursor         : pointer;
 		text-transform : uppercase;
 		text-decoration: none;
 		outline        : none !important;
 		letter-spacing : 0.8px;
+        font-size      : @baseFontSize;
+        line-height    : 2;
 
-		.rounded(@BRadious);
-		.transition(@time:0.20s);
-
+		.rounded(0);
+        .font-bold();
+		.transition(background);
+        .transition(color);
 		//Status
 		.btn_palette();
 		&:active,
@@ -68,16 +70,12 @@
 .btn_palette(@color-main: @themeColor_1; @color-sec: @white;){
 	color     : @color-sec;
 	background: @color-main;
-	border    : 1px @color-sec solid;
+	border    : @color-main 2px solid;
 
 	&:hover,
 	&:focus{
 		color       : @color-main;
 		background  : @color-sec;
-		border-color: @color-main;
-
-		& when (@color-sec = @white) {
-			color: @color-main;
-		}
+		//border-color: @color-main;
 	}
 }

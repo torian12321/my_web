@@ -15,10 +15,12 @@ menu_func = function(){
     opener = _doc.querySelector('.menu-opener'),
     menu   = _doc.querySelector('.menu-wrap');
 
-    opener.addEventListener('click', function(){
-        opener.classList.toggle('active');
-        menu.classList.toggle('active');
-    });
+    if (opener && menu){
+        opener.addEventListener('click', function(){
+            opener.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+    }
 };
 
 

@@ -43,6 +43,9 @@
 #contact{
     .background-parallax('@{defImgDir}/bg.jpg');
 }
+.contact-chanels{
+    margin-top: 30px;
+}
 body{
 	background: @themeColor_BG;
 }
@@ -154,32 +157,4 @@ section{
     		.font_icons();
         }
     }
-    /*
-    .goDown{
-        @size: 100px;
-
-        position   : absolute;
-        bottom     : 0;
-        left       : 50%;
-        height     : @size / 2;
-        width      : @size;
-        margin-left: -@size / 2;
-        background : @white;
-        overflow   : hidden;
-        text-align : center;
-        .rounded(@size @size 0 0);
-        &:before{
-            content    : '\e801';
-            position   : absolute;
-            top        : 0;
-            left       : 0;
-            height     : @size;
-            width      : @size;
-            line-height: @size / 2;
-    		font-size  : @size * 0.4;
-            color      : @themeColor_1;
-    		.font_icons();
-        }
-    }
-    */
 }
