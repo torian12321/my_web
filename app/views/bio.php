@@ -21,7 +21,7 @@
         [
         	'type'         => 'volunteer',
         	'name'         => 'Coder Dojo',
-            'title'        => 'Mentor - Software',
+            'title'        => 'Mentor - Volunteer',
             'date'         => 'June 2015',
             'location'     => 'Dublin',
             'link'         => 'http://theclubhouse.ie/',
