@@ -1,11 +1,11 @@
-<div class="menu-opener">
+<div class="menu-opener hidden">
     <div></div>
     <div></div>
     <div></div>
 </div>
 
 
-<div class="menu-wrap">
+<div class="menu-wrap hidden">
     <div class="menu-content">
         <div class="img"></div>
         <ul>

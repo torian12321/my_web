@@ -12,3 +12,19 @@
         left : 5px;
     }
 }
+
+
+
+#home{
+    @title_h: 180px;
+    @title_w: 250px;
+
+    .title{
+        height     : @title_h;
+        width      : @title_w;
+        margin     : -@title_h/2 auto 0 -@title_w/2;
+        padding    : 0 16px;
+        font-size  : (@title_h / 3) * 0.75;
+        line-height: @title_h / 3;
+    }
+}

@@ -5,6 +5,7 @@
 
 <?php
     require_once __dir__ . '/views/_header.php';
+    require_once __dir__ . '/views/_bg.php';
     require_once __dir__ . '/views/_menu.php';
     require_once __dir__ . '/views/_quotes.php';
 

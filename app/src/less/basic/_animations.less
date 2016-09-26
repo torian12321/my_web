@@ -1,13 +1,19 @@
 // Spin
 @-moz-keyframes    spin { 100% { -moz-transform   : rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes 			   spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes         spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
 // Blink
 @-moz-keyframes    blink { 0% { .opacity(0); } 100% { .opacity(1); } }
 @-webkit-keyframes blink { 0% { .opacity(0); } 100% { .opacity(1); } }
-@keyframes 			   blink { 0% { .opacity(0); } 100% { .opacity(1); } }
+@keyframes         blink { 0% { .opacity(0); } 100% { .opacity(1); } }
+
+
+// Falling
+@-moz-keyframes    falling { 0%   {left: -5vw; }	100% {left: 105vw; } }
+@-webkit-keyframes falling { 0%   {left: -5vw; }	100% {left: 105vw; } }
+@keyframes         falling { 0%   {left: -5vw; }	100% {left: 105vw; } }
 
 
 // Pulse
@@ -27,4 +33,15 @@
 		70%  { box-shadow        : 0 0 0 26px fadeout(@color, 100%); }
 		100% { box-shadow        : 0 0 0 0    fadeout(@color, 100%); }
 	}
+}
+
+.animation_keyframes(indicateContent, {.home_header_arrow-keyframes();});
+.home_header_arrow-keyframes(){
+	@position_ini: 0px;
+	0%   {margin-top: @position_ini; }
+	80%  {margin-top: @position_ini; }
+	85%  {margin-top: @position_ini+20; }
+	90%  {margin-top: @position_ini+10; }
+    95%  {margin-top: @position_ini+20; }
+    100% {margin-top: @position_ini; }
 }

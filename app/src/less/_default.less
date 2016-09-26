@@ -19,6 +19,9 @@
 .bg_sec{
     background: @themeColor_2;
 }
+.hidden{
+    opacity: 0;
+}
 
 //---------------------
 //--- General page ----
@@ -87,7 +90,7 @@ section{
 
     height    : 100vh;
     min-height: @title_h * 2;
-    background: fadeout(@black, 50%);
+    background: fadeout(@black, 85%);
     text-align: center;
     .title{
         position   : absolute;
@@ -155,6 +158,62 @@ section{
     		font-size  : @size * 0.4;
             color      : @white;
     		.font_icons();
+            .animation(
+                @animation : indicateContent;
+                @time      : 7s;
+                @speedCurve: linear;
+                @iterations: infinite
+            );
         }
     }
+}
+
+
+
+
+
+
+
+@BG_elements: 20;
+.bg div{
+	@size    : 2vw;
+    @size_min: 20px;
+    @size_max: 50px;
+
+	position  : fixed;
+	left      : -@size;
+    min-width : @size_min;
+    min-height: @size_min;
+    height    : @size;
+	width     : @size;
+    max-width : @size_max;
+    max-height: @size_max;
+
+    background: fadeout(@white, 80%);
+    .rotate(45deg);
+    .animation(
+        @animation : falling;
+        @speedCurve: ease-in;
+        @iterations: infinite;
+    );
+    .animation_delay(-5s);
+}
+
+
+//-------------------
+//----- Mixins ------
+//-------------------
+.generate-columns(@BG_elements);
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .bg .c-@{i} {
+    .makeRandom(5, 10);
+	@fall_time   : @randNum * 1s;
+
+    top      : @i *( 100vh / @BG_elements);
+
+	-moz-animation-duration   : @fall_time;
+	-webkit-animation-duration: @fall_time;
+	animation-duration        : @fall_time;
+  }
+  .generate-columns(@n, (@i + 1));
 }
