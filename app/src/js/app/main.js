@@ -37,9 +37,3 @@ menu_func = function(){
 
 _doc.addEventListener('DOMContentLoaded', init);
 _win.addEventListener('resize', resize);
-
-
-// Service worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js');
-}
