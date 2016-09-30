@@ -29,7 +29,7 @@
 
 
     		<div class="skills-list c_2">
-    			<h1>Framewors</h1>
+    			<h1>Frameworks</h1>
     			<?php
     				$iconStyle = 'circle';
     				html_skill($iconStyle, 3, 'Grails');
