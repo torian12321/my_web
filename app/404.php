@@ -1,19 +1,19 @@
-<!--------------------------------->
-<!--- To understand recursion, ---->
-<!-- see the bottom of this code -->
-<!--------------------------------->
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    	<title>404 page</title>
+    	<style>#errorPage{padding:0 20px;margin:50px auto;display:block;max-width:500px;text-align:center;color:grey;}h1{color:#2a85ce;}.pet{display:block;margin:30px;font-size:32px;}</style>
+    </head>
 
-<?php require_once __dir__ . '/views/_header.php'; ?>
 
-<div id="erroPage" class="row txt-c">
-    <h1>404</h1>
-    <span class="pet">(ﾉ◕_◕)ﾉ ︵ ┻━┻</span>
-    <span>The &*+#$£@*# page does not exist</span>
-</div>
-
-<?php require_once __dir__ . '/views/_footer.php'; ?>
-
-<!--------------------------------->
-<!--- To understand recursion, ---->
-<!--  see the top of this code   -->
-<!--------------------------------->
+    <body>
+        <div id="errorPage">
+            <h1>404</h1>
+            <span class="pet">(ﾉ◕_◕)ﾉ ︵ ┻━┻</span>
+            <span>The &*+#$£@*# page does not exist</span>
+        </div>
+    </body>
+</html>
