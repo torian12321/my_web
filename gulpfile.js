@@ -15,19 +15,20 @@ clean    = require('gulp-clean');
 var paths = {
 	app    : './app/',			// folder for development purposes
 	dist   : './dist/',			// folder for optimized files for the production site (distribution)
-	js     : './src/js/',
-	jsApp  : './src/js/app/',
-	jsLib  : './src/js/lib/',
-	css    : './src/css/',
-	less   : './src/less/',
-	img    : './src/img/',
-	fonts  : './src/fonts/',
-	files  : './src/files/',
+	js     : './inc/js/',
+	jsApp  : './inc/js/app/',
+	jsLib  : './inc/js/lib/',
+	css    : './inc/css/',
+	less   : './inc/less/',
+	img    : './inc/img/',
+	fonts  : './inc/fonts/',
+	files  : './inc/files/',
 	views  : './views/'
 };
 
 
 // Main tasks
+gulp.task('default',   ['build']);
 gulp.task('build'    , ['scripts', 'styles']);
 gulp.task('build-all', ['build-dist']);
 

@@ -4,26 +4,21 @@
 
 var
 fancy_functions = function(){
-	// It gates data from manifest.js on project root
-    loadJSON('manifest.json', function(response) {
-        var
-        appData = JSON.parse(response),
-        text    = appData.name + ' - ' + appData.description;
-
-        sayHello(text, appData.theme_color);
-        animateTitle_pet();
-    });
+	// Same Data as manifest.js on project root
+    sayHello('Aitor - Interactive resume', "#163b63");
+    animateTitle_pet();
 },
 
 // http://codepen.io/SamEureka/pen/GZVJvE?editors=0010
 // Check the console
 sayHello = function(console_text, color){
-	var css_shadow = '';
-
-	var lum = 0;
-	var hex = String(color).replace(/[^0-9a-f]/gi, '');
-	// convert to decimal and change luminosity
-	var rgb = '', c, i;
+	var
+    css_shadow = '',
+    lum = 0,
+	hex = String(color).replace(/[^0-9a-f]/gi, ''),
+	rgb = '',
+    c   = null,
+    i   = 0;
 	for (i = 0; i < 3; i++) {
 		c = parseInt(hex.substr(i*2,2), 16);
 		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);

@@ -4,11 +4,7 @@ _win = window,
 init = function(){
     menu_func();
     smoothScrolling();
-    //fitContentOnScreen();
     fancy_functions();
-},
-resize = function(){
-    //fitContentOnScreen();
 },
 menu_func = function(){
     var
@@ -31,9 +27,8 @@ menu_func = function(){
             opener.classList.add('hidden');
             menu.classList.add('hidden');
         }
-    }
+    };
 };
 
 
 _doc.addEventListener('DOMContentLoaded', init);
-_win.addEventListener('resize', resize);
