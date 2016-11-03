@@ -39,7 +39,7 @@
                 </a>
                 <a
                     target= "_blank"
-                    href  = "<?php echo $GLOBALS['srcDir']; ?>files/CV_Aitor_Palomares.pdf"
+                    href  = "<?php echo $GLOBALS['incDir']; ?>files/CV_Aitor_Palomares.pdf"
                     class = "xs-4 sm-6 md-12 c-contact doc">
                     Document
                 </a>

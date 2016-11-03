@@ -1,7 +1,6 @@
 function validateForm() {
     var
     formValid   = true,
-    body        = '',
     name        = _doc.forms.mailForm.name,
     email       = _doc.forms.mailForm.email,
     content     = _doc.forms.mailForm.content,
@@ -33,9 +32,7 @@ function validateForm() {
 
     //Sending the email
     if(formValid){
-        body += content.value + '<br><br>';
-        body += 'Email: ' + email.value;
-        _win.open('mailto:aitorpalomares?subject=Web message from: '+ name.value +'&body=' + body);
+        _win.open('mailto:aitorpalomares@gmail.com?subject=Web message from: '+ name.value +'&body=' + content.value);
     }
     return false;
 }
