@@ -1,8 +1,24 @@
 {
-	"name"        : "webTemplate_package",
+	"name"        : "interactive_resume",
+	"description" : "Aitor CV"
 	"author"      : "Aitor",
+	"url"         : "torian12321.github.io/my_web/",
 	"version"     : "1.0.0",
-    "dependencies": {
+	"repository"  : {
+		"type": "git",
+		"url" : "https://github.com/torian12321/my_web"
+	},
+	"scripts": {
+		"test"      : "echo \"Error: no test specified\" && exit 1",
+		"start"     : "npm run watch",
+		"build"     : "gulp build",
+		"build:all" : "gulp build:dist",
+		"build:dist": "gulp build:dist",
+		"watch"     : "gulp watch",
+		"scripts"   : "gulp scripts",
+		"styles"    : "gulp styles"
+	},
+    	"dependencies": {
 		"gulp"             : "*",
 		"gulp-less"        : "*",
 		"gulp-clean-css"   : "*",
