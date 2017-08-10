@@ -1,0 +1,21 @@
+@import '~LESS_conf';
+
+.avatar{
+    @size : 80px;
+    @color: @themeColor_2;
+
+    font-size : @size;
+    height    : 1em;
+    width     : 1em;
+    border    : @color .04em solid;
+    background: @color center center no-repeat;
+    box-sizing: border-box;
+    .rounded(50%);
+    .background-cover();
+
+    // Sizes
+    &.xs{font-size: @size * 0.5;}
+    &.sm{font-size: @size;}
+    &.md{font-size: @size * 1.5;}
+    &.lg{font-size: @size * 2.5;}
+}

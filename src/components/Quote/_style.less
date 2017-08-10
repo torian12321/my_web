@@ -1,0 +1,31 @@
+@import '~LESS_conf';
+
+.quote{
+	@color   : @fontColor_black;
+	@iconSize: 20px;
+
+	position   : relative;
+	display    : inline-block;
+	max-width  : @bp_lg * 0.8;
+	padding    : 10px (@iconSize + 10px);
+	text-align : center;
+	color      : @color;
+    font-size  : @fontSize_base;
+	line-height: 1.75;
+	.font_elegant();
+	.author{
+		display   : block;
+		margin-top: 10px;
+		font-size : 0.8em;
+		text-align: right;
+		color     : fadeout(@color, 40%);
+	}
+	.icon{
+		position : absolute;
+		top      : 0;
+		font-size: 2em;
+		fill     : @themeColor_2;
+		&.icon-open {left : 0;}
+		&.icon-close{right: 0;}
+	}
+}

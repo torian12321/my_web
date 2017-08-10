@@ -1,0 +1,26 @@
+@import '~LESS_conf';
+
+.loading{
+    @size : 32px;
+    @color: @themeColor_1;
+
+    font-size : @size;
+    display   : block;
+    opacity   : .8;
+    box-sizing: border-box;
+    margin    : auto;
+    width     : 1em;
+    height    : 1em;
+    background      : transparent;
+    border          : @colorState_disable .1em solid;
+    border-top-color: @color;
+    .animation_spin();
+    .animation(spin; 1s); 
+    .rounded(50%);
+
+    // Sizes
+    &.xs{font-size: @size * 0.5;}
+    &.sm{font-size: @size;}
+    &.md{font-size: @size * 1.5;}
+    &.lg{font-size: @size * 2.5;}
+}

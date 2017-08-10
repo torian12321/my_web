@@ -1,0 +1,70 @@
+@import '~LESS_conf';
+
+.styled-input {
+    margin  : 2rem 0 1rem;
+    position: relative;
+    width   : 100%;
+    label {
+        color         : @fontColor_grey;
+        padding       : 1rem;
+        position      : absolute;
+        top           : 0;    
+        left          : 0;
+        width         : 100%;
+        box-sizing    : border-box;
+        pointer-events: none;
+        .transition();
+    }
+    span {
+        position  : absolute;
+        bottom    : 0;
+        left      : 50%;
+        right     : 50%;
+        display   : block;
+        height    : 3px;
+        background: @themeColor_1;
+        .transition();
+    }
+
+    input,
+    textarea {
+        padding   : 1rem;
+        border    : 0; 
+        width     : 100%;
+        font-size : 1rem;
+        box-sizing: border-box;
+        outline   : 0;
+        resize    : vertical;
+        background: @white;
+        .smart-text-color(@white);
+
+        // Border Effect
+        &:focus ~ label,
+        &:hover ~ label{
+            color: @themeColor_1;
+        }
+        &:focus ~ span {
+            left : 0;
+            right: 0;
+        }
+
+        &:focus ~ label,
+        &.filled ~ label{
+            font-size     : 0.75em;
+            top           : -2.25rem;
+            pointer-events: auto;
+        }
+
+        &:disabled,
+	  	&[disabled]{
+            color     : @fontColor_disable;
+            background: @colorState_disable;
+            cursor    : not-allowed; 
+                ~ label{
+                color: @fontColor_disable;
+            }
+        }
+    }
+
+    // Add Status colors
+}

@@ -1,0 +1,21 @@
+@import '~LESS_conf';
+
+.icon-btn{
+    font-size  : 16px;
+    width      : 1.5em;
+    height     : 1.5em;
+    line-height: 1.95em;
+    text-align : center;
+    cursor     : pointer;
+    background : @grey2;
+    opacity    : .6;
+    .rounded(50%);
+    .transition(opacity);
+    &:hover{
+        opacity: 1;
+    }
+
+    path{
+        fill: @white;
+    }
+}

@@ -1,0 +1,40 @@
+@import '~LESS_conf';
+
+.link{
+	color          : @themeColor_1;
+	cursor         : pointer;
+    text-decoration: none;
+	&:hover{
+		color: @themeColor_2;
+	}
+	&:visited{
+		color: desaturate(@themeColor_1, 25%);
+	}
+
+	&.preview{
+		position: relative;
+		&::before {
+			@BG: lighten(@themeColor_2, 10%);
+
+			position  : absolute;
+			content   : attr(href);
+			top       : 100%;
+			left      : 0;
+			opacity   : 0;
+			padding   : .25em 1em;
+			margin-top: 0.5em;
+			background: @BG;
+			z-index   : 1;
+			font-size : 0.8em;
+
+			@shadow: 0 0 3px 0 rgba(0,0,0,.3);
+			.shadow(@shadow);
+			.smart-text-color(@BG);
+			.transition();
+		}
+		&:hover::before {
+			opacity: 1;
+			left: 24px;
+		}
+	}
+}

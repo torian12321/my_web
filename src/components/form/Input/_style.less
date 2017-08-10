@@ -1,0 +1,52 @@
+@import '~LESS_conf';
+
+.quantity-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.quantity-input__modifier,
+.quantity-input__screen {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+}
+
+.quantity-input__modifier {
+  padding: .7rem;
+  width: 3rem;
+  font-size: 1.5rem;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+
+  background: #f3f3f3;
+
+  .smart-text-color(#f3f3f3);
+  .transition();
+}
+.quantity-input__modifier:hover {
+    background: @themeColor_1;
+    .smart-text-color(@themeColor_1);
+}
+.quantity-input__modifier--left {
+  border-radius: 3px 0 0 3px;
+}
+.quantity-input__modifier--right {
+  border-radius: 0 3px 3px 0;
+}
+
+.quantity-input__screen {
+  width: 4rem;
+  padding: .7rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.styled-input.styled-input-number{
+    label{
+        padding-left: 4rem;
+    }
+}
