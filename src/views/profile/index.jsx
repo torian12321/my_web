@@ -2,14 +2,16 @@ var
 React             = require('react'),
 PropTypes         = require('prop-types'),
 Section           = require('Section'),
-Profile_attribute = require('./Profile_attribute.jsx');
+Avatar            = require('Avatar'),
+AvatarImg         = require('./avatar.jpg'),
+Profile_attribute = require('./Profile_attribute');
 
 const Profile = props =>(
 	<Section { ...props.sectionConf }>
     	<div className="row-spacing">
 
             <div className="xs-12 sm-5 lg-3 m-b-30">
-                <div className="avatar m-x-auto"></div>
+                <Avatar className="m-x-auto" src={AvatarImg} size="lg"/>
             </div>
 
             <div className="xs-12 sm-7 lg-3 lg-push-6 p-b-30 details">

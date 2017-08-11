@@ -1,9 +1,10 @@
 var
 React      = require('react'),
 PropTypes  = require('prop-types'),
+classNames = require('classnames'),
 Menu_btn   = require('./Menu_btn.jsx'),
 Menu_panel = require('./Menu_panel.jsx'),
-styles    = require('./_style.less');
+styles     = require('./_style.less');
 
 class Menu extends React.Component {
     constructor(props) {
@@ -27,12 +28,11 @@ class Menu extends React.Component {
     render() {
         return (
             <div
-            id = 'menu'
-            className={
-                'menu-' +
-                !this.state.isVisible ? ' hiddenn' : ''  +
-                this.state.isOpen     ? ' active' : ''
-            }
+                className={classNames(
+                    '🦄',
+                    !this.state.isVisible ? ' hidden' : null,
+                    this.state.isOpen     ? ' active' : null
+                )}
             >
                 <Menu_btn   isOpen={ this.state.isOpen } onClick={ this.toggleSlide.bind(this) } />
                 <Menu_panel isOpen={ this.state.isOpen } items={this.props.items} img={this.props.img} />

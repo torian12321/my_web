@@ -3,19 +3,15 @@
 @menu_z: 500;
 @menu_w: 300px;
 
+.🦄{
 .menu-opener{
-  @size       : 50px;
-  @bar_w      : @size * 0.55;
-  @bar_h      : @size * 0.05;
-  @bar_gutter : @size * 0.15;
-  @color      : @red;
-
+  font-size  : 50px;
   position   : fixed;
   right      : 20px;
   top        : 20px;
-  width      : @size;
-  height     : @size;
-  background : @color;
+  width      : 1em;
+  height     : 1em;
+  background : @red;
   cursor     : pointer;
   z-index    : @menu_z + 10;
   overflow   : hidden;
@@ -25,27 +21,25 @@
   div{
       position  : absolute;
       display   : block;
-      left      : (@size - @bar_w) / 2;
-      width     : @bar_w;
-      height    : @bar_h;
+      left      : .235em;
+      width     : .55em;
+      height    : .05em;
       background: @white;
       .transition();
-      .rounded(@bar_h);
-      &:nth-child(1){ top: ((@size - @bar_h) / 2) - (@bar_gutter + @bar_h); }
-      &:nth-child(2){ top: ((@size - @bar_h) / 2); }
-      &:nth-child(3){ top: ((@size - @bar_h) / 2) + (@bar_gutter + @bar_h)}
+      .rounded(.05em);
+      &:nth-child(1){ top: .3em; }
+      &:nth-child(2){ top: .5em; }
+      &:nth-child(3){ top: .7em}
   }
 
     &.active{
         div{
             // Center bar out of circle
-            &:nth-child(2){ left: @size;}
+            &:nth-child(2){ left: 1em;}
 
             // Create X shape
             &:nth-child(1),
-            &:nth-child(3){
-                top: (@size - @bar_h) / 2;
-            }
+            &:nth-child(3){ top: .5em; }
             &:nth-child(3){ .transform(rotate(45deg));  }
             &:nth-child(1){ .transform(rotate(-45deg)); }
         }
@@ -94,7 +88,7 @@
 
                 position     : relative;
                 display      : block;
-                padding      : 0 @gutter_x 0 ((@gutter_x * 2) + @conSize);
+                padding      : 0 15px;
                 cursor       : pointer;
                 z-index      : 1;
                 font-size    : 1.5em;
@@ -113,41 +107,24 @@
                     left      : 0;
                     width     : 8px;
                     z-index   : -1;
-                    opacity: 0.8;
+                    opacity   : 0.8;
+                    background: darken(@themeColor_1, 10%);
                     .transition(width);
                 }
+                svg{
+                    fill: @color_text;
+                    .transition();
+                }
             }
-            &:nth-child(1) a:after{ background: darken(@themeColor_1, 10%); }
-            &:nth-child(2) a:after{ background: darken(@themeColor_1, 15%); }
-            &:nth-child(3) a:after{ background: darken(@themeColor_1, 20%); }
-            &:nth-child(4) a:after{ background: darken(@themeColor_1, 25%); }
-            &:nth-child(5) a:after{ background: darken(@themeColor_1, 30%); }
-            &:nth-child(6) a:after{ background: darken(@themeColor_1, 35%); }
             &.active,
             &:hover a{
                 color : @white;
+                svg{
+                    fill: @white;
+                }
                 &:after{
                     width: 100%;
                 }
-            }
-
-            // Icons
-            a.home:before     {content: '\E820';}
-            a.profile:before  {content: '\E805';}
-            a.bio:before      {content: '\E818';}
-            a.skills:before   {content: '\E800';}
-            a.portfolio:before{content: '\F121';}
-            a.contact:before  {content: '\F0E0';}
-            a:before{
-                position   : absolute;
-                left       : @gutter_x;
-                top        : 0;
-                height     : @conSize;
-                width      : @conSize;
-                font-size  : @conSize * 0.8;
-                line-height: @conSize + (@gutter_y * 2);
-                text-align : center;
-                //.font_icons();
             }
         }
     }
@@ -203,4 +180,5 @@
     text-align : center;
     line-height: 2;
     background: fadeout(@black, 80%);
+}
 }

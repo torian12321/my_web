@@ -1,11 +1,12 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+Icon      = require('Icon');
 
 const Menu_panelOption = props =>(
 	<li>
 		<a href= { '#'+props.id } className= { props.name }>
-			{ props.title }
+			<Icon /> { props.title }
 		</a>
 	</li>		
 );

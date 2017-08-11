@@ -8,7 +8,7 @@ const Menu_panel = props =>(
     <div className={ 'menu-wrap ' + (props.isOpen ? 'active' : '') }>
 	    <div className="menu-content">
 
-	        <div className="img aa" style={{ backgroundImage: `url(${props.img})` }}></div>
+	        <div className="img" style={{ backgroundImage: `url(${props.img})` }}></div>
 	        <ul>
 	        	{ props.items.map((opt, i) => <Menu_panelOption {...opt} key={i}/> )}
 	        </ul>
