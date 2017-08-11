@@ -1,0 +1,32 @@
+{
+	"home": {
+	 	"id"   : "home",
+		"name" : "home",
+		"title": "Home"
+	},
+	"profile": {
+		"id"   : "profile",
+		"name" : "profile",
+		"title": "Profile"
+	},
+	"biography": {
+		"id"   : "biography",
+		"name" : "bio",
+		"title": "bio"
+	},
+	"skills": {
+		"id"   : "skills",
+		"name" : "skills",
+		"title": "Skills"
+	},
+	"portfolio": {
+		"id"   : "portfolio",
+		"name" : "portfolio",
+		"title": "Portfolio"
+	},
+	"contact": {
+		"id"   : "📩",
+		"name" : "contact",
+		"title": "Contact"
+	}
+}

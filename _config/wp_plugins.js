@@ -19,7 +19,7 @@ module.exports = (outDir, isProd) => {
       template: path.resolve(__dirname, '../src/index.ejs'),
       minify  : {
         preserveLineBreaks   : false,
-        removeComments       : isProd,
+        removeComments       : false,
         collapseWhitespace   : isProd,
         removeAttributeQuotes: isProd,
         removeEmptyAttributes: isProd,

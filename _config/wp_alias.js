@@ -8,8 +8,11 @@ module.exports = {
 
     LESS_conf: path.resolve(__dirname, '../src/styles'),
 
-    Main  : path.resolve(__dirname, '../src/components/Main'),
-    Nav   : path.resolve(__dirname, '../src/components/Nav'),
+    Main  : path.resolve(__dirname, '../src/views/Main'),
+    
+    BG     : path.resolve(__dirname, '../src/components/BG'),
+    Section: path.resolve(__dirname, '../src/components/Section'),
+    Menu   : path.resolve(__dirname, '../src/components/Menu'),  
 
     // UI
     Loading  : path.resolve(__dirname, '../src/components/Loading'),
@@ -20,6 +23,7 @@ module.exports = {
     Img      : path.resolve(__dirname, '../src/components/Img'),
     Icon     : path.resolve(__dirname, '../src/components/Icon'),
     IconBtn  : path.resolve(__dirname, '../src/components/IconBtn'),
+    Menu     : path.resolve(__dirname, '../src/components/Menu'),
     
     // Form
     Radio    : path.resolve(__dirname, '../src/components/form/Radio'),

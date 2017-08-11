@@ -1,0 +1,206 @@
+@import '~LESS_conf';
+
+@menu_z: 500;
+@menu_w: 300px;
+
+.menu-opener{
+  @size       : 50px;
+  @bar_w      : @size * 0.55;
+  @bar_h      : @size * 0.05;
+  @bar_gutter : @size * 0.15;
+  @color      : @red;
+
+  position   : fixed;
+  right      : 20px;
+  top        : 20px;
+  width      : @size;
+  height     : @size;
+  background : @color;
+  cursor     : pointer;
+  z-index    : @menu_z + 10;
+  overflow   : hidden;
+  .rounded(50%);
+  .shadow();
+  .transition(opacity);
+  div{
+      position  : absolute;
+      display   : block;
+      left      : (@size - @bar_w) / 2;
+      width     : @bar_w;
+      height    : @bar_h;
+      background: @white;
+      .transition();
+      .rounded(@bar_h);
+      &:nth-child(1){ top: ((@size - @bar_h) / 2) - (@bar_gutter + @bar_h); }
+      &:nth-child(2){ top: ((@size - @bar_h) / 2); }
+      &:nth-child(3){ top: ((@size - @bar_h) / 2) + (@bar_gutter + @bar_h)}
+  }
+
+    &.active{
+        div{
+            // Center bar out of circle
+            &:nth-child(2){ left: @size;}
+
+            // Create X shape
+            &:nth-child(1),
+            &:nth-child(3){
+                top: (@size - @bar_h) / 2;
+            }
+            &:nth-child(3){ .transform(rotate(45deg));  }
+            &:nth-child(1){ .transform(rotate(-45deg)); }
+        }
+    }
+}
+
+.menu-wrap{
+    // http://codepen.io/jeffmccarthyesq/pen/LEEKLZ?editors=0100
+
+    position  : fixed;
+    overflow  : hidden;
+    top       : 0%;
+    width     : @menu_w;
+    height    : 100vh;
+    left      : 0;
+    padding   : 0;
+    display   : block;
+    visibility: hidden;
+    z-index   : @menu_z;
+    transform : translate(-50px);
+    transition: all 0.5s;
+    .menu-content{
+        opacity: 0;
+        height : 100vh;
+    }
+    .img{
+        width : 100%;
+        height: 200px;
+        background: center center no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+    }
+    ul{
+        @conSize : 30px;
+        @gutter_x: 15px;
+        @gutter_y: 10px;
+
+        padding: 0;
+        margin : 0;
+        li{
+            padding: 0;
+            margin: 0;
+            a{
+                @color_text: fadeout(@black, 30%);
+
+                position     : relative;
+                display      : block;
+                padding      : 0 @gutter_x 0 ((@gutter_x * 2) + @conSize);
+                cursor       : pointer;
+                z-index      : 1;
+                font-size    : 1.5em;
+                line-height  : @conSize + (@gutter_y * 2);
+                color        : @color_text;
+                border-bottom: @color_text solid 1px;
+                font-weight  : bold;
+                text-decoration: none;
+                .transition(color);
+                &:after{
+                    // expandable BG
+                    position  : absolute;
+                    content   : '';
+                    top       : 0;
+                    bottom    : 0;
+                    left      : 0;
+                    width     : 8px;
+                    z-index   : -1;
+                    opacity: 0.8;
+                    .transition(width);
+                }
+            }
+            &:nth-child(1) a:after{ background: darken(@themeColor_1, 10%); }
+            &:nth-child(2) a:after{ background: darken(@themeColor_1, 15%); }
+            &:nth-child(3) a:after{ background: darken(@themeColor_1, 20%); }
+            &:nth-child(4) a:after{ background: darken(@themeColor_1, 25%); }
+            &:nth-child(5) a:after{ background: darken(@themeColor_1, 30%); }
+            &:nth-child(6) a:after{ background: darken(@themeColor_1, 35%); }
+            &.active,
+            &:hover a{
+                color : @white;
+                &:after{
+                    width: 100%;
+                }
+            }
+
+            // Icons
+            a.home:before     {content: '\E820';}
+            a.profile:before  {content: '\E805';}
+            a.bio:before      {content: '\E818';}
+            a.skills:before   {content: '\E800';}
+            a.portfolio:before{content: '\F121';}
+            a.contact:before  {content: '\F0E0';}
+            a:before{
+                position   : absolute;
+                left       : @gutter_x;
+                top        : 0;
+                height     : @conSize;
+                width      : @conSize;
+                font-size  : @conSize * 0.8;
+                line-height: @conSize + (@gutter_y * 2);
+                text-align : center;
+                //.font_icons();
+            }
+        }
+    }
+    &:before {
+        // Backgroun with boble effect
+        content   : "";
+        position  : absolute;
+        width     : 0;
+        height    : 0;
+        background: darken(@white, 10%);;
+        left      : 0;
+        top       : 10%;
+        -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        .rounded(50%);
+    }
+
+    // Open
+    &.active{
+        display   : block;
+        visibility: visible;
+        transform : translateZ(0px);
+        transition: all 0.5s;
+        .shadow();
+        .menu-content {
+            position: relative;
+            z-index : 1;
+            opacity : 1;
+            transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        &:before {
+            @size: 200vmax;
+
+            display    : block;
+            top        : 50%;
+            left       : 0;
+            height     : @size;
+            width      : @size;
+            margin-left: -@size / 2;
+            margin-top : -@size / 2;
+            -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+    }
+}
+
+
+.menu-footer{
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    right      : 0;
+    text-align : center;
+    line-height: 2;
+    background: fadeout(@black, 80%);
+}

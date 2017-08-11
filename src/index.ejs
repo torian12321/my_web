@@ -1,5 +1,9 @@
 <% data = htmlWebpackPlugin.options.data %>
 
+<!--*****************************-->
+<!--* To understand recursion, **-->
+<!-- see the bottom of this code -->
+<!--*****************************-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,18 +14,18 @@
     <title><%= data.name %></title>
     <meta name="description" content="<%= data.description %>">
 
-    <!-- Colors on browser header (mobile) -->
+    <%/* Colors on browser header (mobile) */%>
     <meta content="<%= data.theme_color %>" name="theme-color">
     <meta content="<%= data.theme_color %>" name="msapplication-navbutton-color">
     <meta content="<%= data.theme_color %>" name="apple-mobile-web-app-status-bar-style">
 
-    <!-- Add to home screen for Safari on iOS -->
+    <%/* Add to home screen for Safari on iOS */%>
     <meta name="apple-mobile-web-app-capable"          content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="<%= data.theme_color %>">
     <meta name="apple-mobile-web-app-title"            content="<%= data.theme_color %>">
     <link rel="apple-touch-icon" href="./icons/launcher/icon-152x152.png" sizes="152x152">
 
-    <!-- Tile Icon for Windows -->
+    <%/*  Tile Icon for Windows */%>
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="msapplication-TileImage" content="./icons/launcher/icon-144x144.png">
     <meta name="msapplication-TileColor" content="<%= data.theme_color %>">
@@ -34,3 +38,7 @@
     <div id="root">Loading</div>
   </body>
 </html>
+<!--*****************************-->
+<!--* To understand recursion, **-->
+<!--* see the top of this code **-->
+<!--*****************************-->
