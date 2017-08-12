@@ -1,14 +1,15 @@
 const path = require('path');
 
 module.exports = {
-    'react': 'preact-compat',
-    'react-dom': 'preact-compat',
+    // 'react'    : 'preact-compat',
+    // 'react-dom': 'preact-compat',
     // // Not necessary unless you consume a module using `createClass`
-    'create-react-class': 'preact-compat/lib/create-react-class',
+    // 'create-react-class': 'preact-compat/lib/create-react-class',
 
     LESS_conf: path.resolve(__dirname, '../src/styles'),
 
     Main  : path.resolve(__dirname, '../src/views/Main'),
+    data  : path.resolve(__dirname, '../src/data'),
     
     BG     : path.resolve(__dirname, '../src/components/BG'),
     Section: path.resolve(__dirname, '../src/components/Section'),
@@ -16,6 +17,7 @@ module.exports = {
 
     // UI
     Loading  : path.resolve(__dirname, '../src/components/Loading'),
+    Grid     : path.resolve(__dirname, '../src/components/Grid'),
     Link     : path.resolve(__dirname, '../src/components/Link'),
     Rating   : path.resolve(__dirname, '../src/components/Rating'),
     Quote    : path.resolve(__dirname, '../src/components/Quote'),

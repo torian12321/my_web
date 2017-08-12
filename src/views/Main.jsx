@@ -50,10 +50,7 @@ class Main extends React.Component {
                 />
                 
                 <Quote {...dataApp.quotes[2]} />
-                <ViewPortfolio
-                    sectionConf = { dataMenu.portfolio }
-                    proyectsList= { dataApp.portfolio }
-                />
+                <ViewPortfolio sectionConf = { dataMenu.portfolio } />
 
                 <Quote {...dataApp.quotes[3]} />
                 <ViewContact />

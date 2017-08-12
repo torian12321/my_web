@@ -2,8 +2,8 @@ var
 React      = require('react'),
 PropTypes  = require('prop-types'),
 classNames = require('classnames'),
-Menu_btn   = require('./Menu_btn.jsx'),
-Menu_panel = require('./Menu_panel.jsx'),
+Menu_btn   = require('./Menu_btn'),
+Menu_panel = require('./Menu_panel'),
 styles     = require('./_style.less');
 
 class Menu extends React.Component {

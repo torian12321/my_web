@@ -1,0 +1,54 @@
+@import '~LESS_conf';
+
+.rating{
+	height   : 1em;
+	font-size: 18px;
+	color    : @themeColor_1;
+	&:before{
+		font-size     : 1em;
+		letter-spacing: 0.5em;
+	}
+}
+
+.skills-list{
+	padding  : 30px 0;
+    font-size: 16px;
+    clear    : both;
+
+	h1{
+		display    : table;
+		padding    : 0 1em;
+		margin     : 0 0 20px;
+		min-width  : 250px;
+		color      : @white;
+		text-align : center;
+		font-size  : 1.5em;
+		line-height: 2;
+	}
+	.skill{
+		padding: 15px;
+		.transition(padding-right);
+		.transition(background);
+		.rating{
+			float: right;
+		}
+
+		&:hover{
+			padding-right: 30px;
+		}
+	}
+
+	&,
+	&.c_1{ .skills_palette(@yellow); }
+	&.c_2{ .skills_palette(@blue); }
+	&.c_3{ .skills_palette(@green); }
+	&.c_4{ .skills_palette(@purple); }
+	&.c_5{ .skills_palette(@pink); }
+}
+
+
+.skills_palette(@color: @themeColor_1){
+	h1{ background: @color; }
+	svg{ fill: @color; }
+	.skill:hover{ background: fadeout(@color, 80%); }
+}

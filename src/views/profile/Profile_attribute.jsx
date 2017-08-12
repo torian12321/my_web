@@ -1,12 +1,13 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+{ Row }   = require('Grid');
 
 const Profile_attribute = props =>(
-    <div className="row-spacing">
+    <Row>
         <h4   className="xs-4 lg-12">{ props.label }</h4>
         <span className="xs-8 lg-12 p-b-10">{props.children}</span>
-    </div>
+    </Row>
 );
 
 

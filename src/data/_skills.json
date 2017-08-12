@@ -2,7 +2,7 @@
 	"skills": [
 		{
 			"title"    : "Skills",
-			"iconClass": "",
+			"iconClass": "star",
 			"skills"   : [
 				{ "level": 5, "name": "HTML" },
 				{ "level": 5, "name": "CSS" },
@@ -22,7 +22,7 @@
 			]
 		},{
 			"title"    : "Frameworks",
-			"iconClass": "circle",
+			"iconClass": "cog",
 			"skills"   : [
 				{ "level": 3, "name": "Grails" },
 				{ "level": 3, "name": "Netbeans" },
@@ -32,7 +32,7 @@
 			]
 		},{
 			"title"    : "Languages",
-			"iconClass": "lang",
+			"iconClass": "chat",
 			"skills"   : [
 				{ "level": 4, "name": "English" },
 				{ "level": 5, "name": "Spanish" },

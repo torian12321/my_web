@@ -194,12 +194,13 @@
 }
 
 .background-img(
-	@BG-url  : '@{defImgDir}/img.png';
+	//@BG-url  : '@{defImgDir}/img.png';
 	@position: center center;
 	@size    : cover;
 	@repeat  : no-repeat;
 	){
-	background             : url(@BG-url) @repeat @position;
+	//background             : url(@BG-url) @repeat @position;
+	background             : @repeat @position;
 
 	background-size        : @size;
 	-moz-background-size   : @size;

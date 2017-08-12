@@ -3,7 +3,7 @@ data_quotes   = require('./_quotes.json'),
 data_menu     = require('./_sections.json'),
 data_skills   = require('./_skills.json'),
 data_biography= require('./_biography.json'),
-data_portfolio= require('./_portfolio.json');
+data_portfolio= require('./_portfolio');
 
 
 export const quotes    = data_quotes.quotes;

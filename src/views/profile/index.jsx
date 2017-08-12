@@ -4,15 +4,16 @@ PropTypes         = require('prop-types'),
 Section           = require('Section'),
 Avatar            = require('Avatar'),
 AvatarImg         = require('./avatar.jpg'),
+{ Column }        = require('Grid'),
 Profile_attribute = require('./Profile_attribute');
 
 const Profile = props =>(
 	<Section { ...props.sectionConf }>
     	<div className="row-spacing">
 
-            <div className="xs-12 sm-5 lg-3 m-b-30">
+            <Column xs={12} sm={5} lg={3}>
                 <Avatar className="m-x-auto" src={AvatarImg} size="lg"/>
-            </div>
+            </Column>
 
             <div className="xs-12 sm-7 lg-3 lg-push-6 p-b-30 details">
                 <h3 className="p-b-20">Details</h3>

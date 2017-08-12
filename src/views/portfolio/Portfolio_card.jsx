@@ -1,6 +1,8 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+Icon      = require('Icon'),
+styles    = require('./_style.less');
 
 const Portfolio_card = props => {
 	const divStyle = {
@@ -9,11 +11,11 @@ const Portfolio_card = props => {
 
 	return(
 	    <Wrapper 
-	    	className= "c-product xs-12 sm-6 lg-4"
+	    	className= "c-product"
 	    	style    = { divStyle }
-	    	href     = {props.link}
+	    	href     = { props.link }
 	    >
-			{ props.link  ? <div className="link"></div> : null }
+			{ props.link  ? <div className="link"><Icon name="pin" /></div> : null }
 			{ props.title ? <h1>{ props.title }</h1> : null }
 			{ props.desc  ? <span className="desc">{props.desc }</span> : null }
 		</Wrapper>
