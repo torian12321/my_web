@@ -5,29 +5,28 @@
 	text-align: center;
 }
 .quote{
-	@color   : @fontColor_black;
 	@iconSize: 20px;
 
+	font-size  : 20px;
 	position   : relative;
 	display    : inline-block;
-	max-width  : 800px;
-	padding    : 10px (@iconSize + 10px);
-	text-align : center;
-	color      : @color;
-    font-size  : @fontSize_base;
+	max-width  : 60ch;
+	padding    : .5em 3em;
+	text-align : center;    
 	line-height: 1.75;
+	.smart-text-color();
 	.font_elegant();
 	.author{
 		display   : block;
-		margin-top: 10px;
-		font-size : 0.8em;
+		margin-top: 1em;
+		font-size : .8em;
 		text-align: right;
-		color     : fadeout(@color, 40%);
+		opacity   : .8; 
 	}
 	.icon{
 		position : absolute;
-		top      : 0;
-		font-size: 2em;
+		top      : -.2em;
+		font-size: 2.5em;
 		fill     : @themeColor_2;
 		&.icon-open {left : 0;}
 		&.icon-close{right: 0;}

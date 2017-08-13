@@ -407,6 +407,24 @@
     background: @colorLight;
 }
 
+.smart-fill-color(){}
+.smart-fill-color(
+	@txt_color : @themeColor_BG;
+	@colorLight: @white;
+	@colorDark : @black2;
+	) when (lightness(@txt_color) >= 50%) {
+    // Its a light color return a dark output
+    background: @colorDark;
+}
+.smart-fill-color(
+	@fill_color : @themeColor_BG;
+	@colorLight: @white;
+	@colorDark : @black2;
+	) when (lightness(@fill_color) < 50%) {
+    // Its a dark color return a dark output
+    fill: @fill_color;
+}
+
 // Mixin to generate random number;
 // int should be 0 or 1, 1 being to make it an integer
 // e.g:
