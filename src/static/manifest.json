@@ -2,7 +2,7 @@
   "name"            : "Aitor",
   "short_name"      : "Aitor",
   "description"     : "React Boilerplate",
-  "theme_color"     : "#337ab7",
+  "theme_color"     : "#2a85ce",
   "background_color": "#FFFFFF",
   "start_url"       : "index.html?launcher=true",
   "start_path"      : "./",

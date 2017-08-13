@@ -8,7 +8,7 @@ styles    = require('./_style.less');
 
 const ViewSkills = props =>(
 	<Section { ...props.sectionConf }>
-		<Row spacing={false}>
+		
 
         { props.skillsList.map((skillGroup, i) => 
             <div className={"skills-list c_" + (i+1)} key={i}>
@@ -18,7 +18,7 @@ const ViewSkills = props =>(
                 )}
             </div>
         )}
-		</Row>
+		
     </Section>
 );
 
