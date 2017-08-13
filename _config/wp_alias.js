@@ -26,6 +26,7 @@ module.exports = {
     Icon     : path.resolve(__dirname, '../src/components/Icon'),
     IconBtn  : path.resolve(__dirname, '../src/components/IconBtn'),
     Menu     : path.resolve(__dirname, '../src/components/Menu'),
+    Title    : path.resolve(__dirname, '../src/components/Title'),
     
     // Form
     Radio    : path.resolve(__dirname, '../src/components/form/Radio'),

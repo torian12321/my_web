@@ -1,12 +1,13 @@
 var
 React      = require('react'),
 PropTypes  = require('prop-types'),
+Title      = require('Title'),
 styles     = require('./_style.less'),
 {Grid, Row}= require('Grid');
 
 const Section = props => (
     <section id={ props.id } className={ props.className }>
-    	{ props.title ? <h1>{ props.title }</h1> : null }
+    	{ props.title ? <Title>{ props.title }</Title> : null }
         <Grid>
             <Row>{ props.children }</Row>
 	    </Grid>
