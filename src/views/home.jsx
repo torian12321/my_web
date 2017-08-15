@@ -1,7 +1,8 @@
 var
 React     = require('react'),
 PropTypes = require('prop-types'),
-Section   = require('Section');
+Section   = require('Section'),
+data      = require('data');
 
 const Home = props =>(
 	<Section id={props.sectionConf.id}>
@@ -21,7 +22,8 @@ Home.propTypes = {
 	gotoLink    : PropTypes.string
 };
 Home.defaultProps = {
-    gotoLink: 'profile'
+	sectionConf : data.menu.home,
+    gotoLink    : data.menu.profile.id
 };
 
 module.exports = Home;

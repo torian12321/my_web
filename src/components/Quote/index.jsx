@@ -5,8 +5,8 @@ styles    = require('./_style.less'),
 Icon      = require('Icon');
 
 const Quote = props =>(
-    <section className="quote-wrap">
-        <blockquote className="quote" cite={props.cite}>
+    <section className="💬">
+        <blockquote cite={props.cite}>
             {props.text}
             {props.author ? <span className="author">{ props.author }</span> : null}
             <Icon className="icon-open"  name="quote" />

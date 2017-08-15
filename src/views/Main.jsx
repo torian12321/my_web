@@ -9,14 +9,14 @@ ViewHome      = require('./home'),
 ViewPortfolio = require('./portfolio'),
 ViewProfile   = require('./profile'),
 ViewSkills    = require('./skills'),
-dataApp       = require('../data'),
-dataMenu      = dataApp.menu;
+dataMenu      = require('data').menu,
+quotes        = require('data').quotes;
 
 class Main extends React.Component {
     render(){
         return (
             <div>
-                 <BG />
+                <BG />
 
                 <Menu 
                 items={[
@@ -28,31 +28,19 @@ class Main extends React.Component {
                     dataMenu.contact,    
                 ]}/>
                 
-                <ViewHome
-                    sectionConf= { dataMenu.home }
-                    gotoLink   = { dataMenu.profile.id }
-                />
-    
-                <ViewProfile
-                    sectionConf= { dataMenu.profile }
-                />
+                <ViewHome />
+                <ViewProfile />
             	
-                <Quote {...dataApp.quotes[0]} />
-                <ViewBio 
-                    sectionConf= { dataMenu.biography }
-                    bioList    = { dataApp.bio }
-                />
+                <Quote {...quotes[0]} />
+                <ViewBio />
 
-                <Quote {...dataApp.quotes[1]} />
-                <ViewSkills 
-                    sectionConf= { dataMenu.skills }
-                    skillsList = { dataApp.skills }
-                />
+                <Quote {...quotes[1]} />
+                <ViewSkills />
                 
-                <Quote {...dataApp.quotes[2]} />
-                <ViewPortfolio sectionConf = { dataMenu.portfolio } />
+                <Quote {...quotes[2]} />
+                <ViewPortfolio />
 
-                <Quote {...dataApp.quotes[3]} />
+                <Quote {...quotes[3]} />
                 <ViewContact />
             </div>
         );
@@ -60,19 +48,3 @@ class Main extends React.Component {
 }
 
 module.exports = Main;
-
-
-
-/*
-
-🦄 Menu
-🐧 Home
-🐧 Profile
-🌟 Skills
-🐧 Portfolio
-📩 Contact
-🐧 Bio
-💬 Quote
-👾🍆🌵🐔⛄
-🙊
-*/

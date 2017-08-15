@@ -18,7 +18,7 @@ const Col = props => (
 const sizes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 Col.propTypes = {
-    children : PropTypes.string.isRequired,
+    children : PropTypes.any.isRequired,
     className: PropTypes.string,
     xs       : PropTypes.oneOf(sizes),
     sm       : PropTypes.oneOf(sizes),

@@ -2,8 +2,10 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 Section   = require('Section'),
+data      = require('data'),
 BioCard   = require('./Bio_card.jsx');
 
+//https://codepen.io/codyhouse/pen/FdkEf
 const ViewBio = props =>(
     <Section { ...props.sectionConf }>
     	{ props.bioList.map((bio, i) => <BioCard {...bio} key={i}>{bio.desc}</BioCard>) }
@@ -12,11 +14,12 @@ const ViewBio = props =>(
 
 
 ViewBio.propTypes = {
-	sectionConf: PropTypes.object,
-    bioList    : PropTypes.array.isRequired
+    sectionConf: PropTypes.object,
+    bioList    : PropTypes.array
 };
 ViewBio.defaultProps = {
-    bioList: []
+    sectionConf: data.menu.biography,
+    bioList    : data.bio
 };
 
 module.exports = ViewBio;

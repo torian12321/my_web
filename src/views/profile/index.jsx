@@ -3,8 +3,9 @@ React             = require('react'),
 PropTypes         = require('prop-types'),
 Section           = require('Section'),
 Avatar            = require('Avatar'),
-AvatarImg         = require('./avatar.jpg'),
 { Column }        = require('Grid'),
+data              = require('data'),
+AvatarImg         = require('./avatar.jpg'),
 Profile_attribute = require('./Profile_attribute');
 
 const Profile = props =>(
@@ -32,7 +33,10 @@ const Profile = props =>(
 );
 
 Profile.propTypes = {
-    sectionConf : PropTypes.object
+    sectionConf: PropTypes.object
+};
+Profile.defaultProps = {
+	sectionConf: data.menu.profile
 };
 
 module.exports = Profile;

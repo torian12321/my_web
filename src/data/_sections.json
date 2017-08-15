@@ -1,26 +1,26 @@
 {
 	"home": {
-	 	"id"   : "home",
+	 	"id"   : "👾",
 		"name" : "home",
 		"title": "Home"
 	},
 	"profile": {
-		"id"   : "profile",
+		"id"   : "🍆",
 		"name" : "profile",
 		"title": "Profile"
 	},
 	"biography": {
-		"id"   : "biography",
+		"id"   : "🌵",
 		"name" : "bio",
-		"title": "bio"
+		"title": "Bio"
 	},
 	"skills": {
-		"id"   : "skills",
+		"id"   : "🏆",
 		"name" : "skills",
 		"title": "Skills"
 	},
 	"portfolio": {
-		"id"   : "portfolio",
+		"id"   : "🐧",
 		"name" : "portfolio",
 		"title": "Portfolio"
 	},
