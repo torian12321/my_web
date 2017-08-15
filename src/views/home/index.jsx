@@ -2,12 +2,13 @@ var
 React     = require('react'),
 PropTypes = require('prop-types'),
 Section   = require('Section'),
-data      = require('data');
+data      = require('data'),
+styles    = require('./_style.less');
 
 const Home = props =>(
-	<Section id={props.sectionConf.id}>
+	<Section id={props.sectionConf.id} className="section-main">
 	
-		<div className="title">
+		<div className="title-main">
 		    Aitor<br/>
 		    Palomares
 		    <span>Interactive resume</span>
