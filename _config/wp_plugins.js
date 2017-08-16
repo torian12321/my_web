@@ -1,5 +1,7 @@
 const
 webpack = require('webpack'),
+ExtractText = require('extract-text-webpack-plugin'),
+SWPrecache = require('sw-precache-webpack-plugin'),
 path    = require('path'),
 Clean   = require('clean-webpack-plugin'),
 Copy    = require('copy-webpack-plugin'),
@@ -35,7 +37,8 @@ module.exports = (outDir, isProd) => {
   // prod only
   if (isProd) {
 		plugins.push(
-			new webpack.optimize.ModuleConcatenationPlugin(),
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      new ExtractText('styles.[hash].css'),
       new webpack.LoaderOptionsPlugin({
         minimize: true,
         debug   : false
@@ -46,16 +49,28 @@ module.exports = (outDir, isProd) => {
         }
       }),
       new webpack.optimize.UglifyJsPlugin({
-        beautify: false,
-        mangle  : {
-          screw_ie8  : true,
-          keep_fnames: true
+        output: {
+          comments: 0
         },
-        compress: {
-          screw_ie8: true
-        },
-        comments: false
-      })
+          compress: {
+          unused: 1,
+          warnings: 0,
+          comparisons: 1,
+          conditionals: 1,
+          negate_iife: 0,
+          dead_code: 1,
+          if_return: 1,
+          join_vars: 1,
+          evaluate: 1
+        }
+      }),
+      new SWPrecache({
+        minify: true,
+				filename: 'service-worker.js',
+				dontCacheBustUrlsMatching: /./,
+				navigateFallback: 'index.html',
+				staticFileGlobsIgnorePatterns: [/\.map$/]
+			})
 		);
 	} else {
 		// dev only

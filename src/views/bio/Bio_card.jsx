@@ -13,7 +13,7 @@ const Bio_card = props => (
             </ul>
         </div>
 
-        <div className="icon"></div>
+        <div className="icon" />
 
         <div className="content">
             <h4>{ props.title }</h4>
