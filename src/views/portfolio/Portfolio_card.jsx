@@ -15,7 +15,7 @@ const Portfolio_card = props => {
 	    	style    = { divStyle }
 	    	href     = { props.link }
 	    >
-			{ props.link  ? <div className="link"><Icon name="pin" /></div> : null }
+			{ props.link  ? <div className="link"><Icon name="link" /></div> : null }
 			{ props.title ? <h1>{ props.title }</h1> : null }
 			{ props.desc  ? <span className="desc">{props.desc }</span> : null }
 		</Wrapper>
