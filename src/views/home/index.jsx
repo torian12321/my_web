@@ -3,6 +3,7 @@ React     = require('react'),
 PropTypes = require('prop-types'),
 Section   = require('Section'),
 data      = require('data'),
+Icon      = require('Icon'),
 styles    = require('./_style.less');
 
 const Home = props =>(
@@ -14,7 +15,7 @@ const Home = props =>(
 		    <span>Interactive resume</span>
 		</div>
 
-		{ props.gotoLink  ? <a href={"#" + props.gotoLink } className="goDown" /> : null }
+		{ props.gotoLink  ? <a href={"#" + props.gotoLink } className="goDown"><Icon name='down' /></a> : null }
     </Section>
 );
 
