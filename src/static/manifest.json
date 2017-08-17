@@ -1,8 +1,8 @@
 {
   "name"            : "Aitor",
   "short_name"      : "Aitor",
-  "description"     : "React Boilerplate",
-  "theme_color"     : "#2a85ce",
+  "description"     : "Interactive resume",
+  "theme_color"     : "#163b63",
   "background_color": "#FFFFFF",
   "start_url"       : "index.html?launcher=true",
   "start_path"      : "./",
