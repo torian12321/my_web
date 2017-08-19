@@ -6,22 +6,22 @@
 	},
 	"profile": {
 		"id"   : "🍆",
-		"icon" : "calendar",
+		"icon" : "user",
 		"title": "Profile"
 	},
 	"biography": {
 		"id"   : "🌵",
-		"icon" : "chevron",
+		"icon" : "feather",
 		"title": "Bio"
 	},
 	"skills": {
 		"id"   : "🏆",
-		"icon" : "star",
+		"icon" : "trophy",
 		"title": "Skills"
 	},
 	"portfolio": {
 		"id"   : "🐧",
-		"icon" : "warning",
+		"icon" : "code",
 		"title": "Portfolio"
 	},
 	"contact": {

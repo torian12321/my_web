@@ -12,7 +12,6 @@ const Menu_panelOption = props =>(
 );
 
 Menu_panelOption.propTypes = {
-	//children: PropTypes.string.isRequired,
     id      : PropTypes.string.isRequired,
     icon    : PropTypes.string
 };
