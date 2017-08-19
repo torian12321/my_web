@@ -3,9 +3,9 @@ React     = require('react'),
 PropTypes = require('prop-types'),
 Section   = require('Section'),
 data      = require('data'),
-BioCard   = require('./Bio_card.jsx');
+BioCard   = require('./Bio_card.jsx'),
+styles    = require('./_style.less');
 
-//https://codepen.io/codyhouse/pen/FdkEf
 const ViewBio = props =>(
     <Section { ...props.sectionConf }>
     	{ props.bioList.map((bio, i) => <BioCard {...bio} key={i}>{bio.desc}</BioCard>) }
