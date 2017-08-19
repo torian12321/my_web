@@ -1,20 +1,23 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+Icon      = require('Icon');
 
 const Bio_card = props => (
     <div className={ 'c-bio ' + props.type + ' ' + props.orientation }>
         <div className="details">
             <h4>{ props.name }</h4>
             <ul>
-            	{ props.date 	 ? <li className="date">{ props.date }</li> : null }
-            	{ props.location ? <li className="loc">{ props.location}</li> : null }
-            	{ props.link 	 ? <li className="link"><a href="<?php echo $link; ?>" target="black">{ props.linkName }</a></li> : null }
+            	{ props.date 	 ? <li><Icon name='calendar'/>{ props.date }</li> : null }
+            	{ props.location ? <li><Icon name='pin'     />{ props.location}</li> : null }
+            	{ props.link 	 ? <li><Icon name='link'    /><a href={props.link} target="black">{ props.linkName }</a></li> : null }
             </ul>
         </div>
 
-        <div className="icon" />
-
+        <div className="icon-wrapp">
+            <Icon name={props.icon}/>
+        </div>
+        
         <div className="content">
             <h4>{ props.title }</h4>
             <p>{ props.children }</p>
@@ -25,8 +28,9 @@ const Bio_card = props => (
 
 Bio_card.propTypes = {
 	children   : PropTypes.any.isRequired,
-	type       : PropTypes.string.isRequired,		// job  | formation | language | travel
-	orientation: PropTypes.string,				// '' | reverse'
+    type       : PropTypes.string,		    // job  | formation | language | travel
+    icon       : PropTypes.string,		    // job  | formation | language | travel
+	orientation: PropTypes.string,			// '' | reverse'
 	name       : PropTypes.string,
 	date       : PropTypes.string,
 	location   : PropTypes.string,
@@ -35,8 +39,7 @@ Bio_card.propTypes = {
 	title      : PropTypes.string    
 };
 Bio_card.defaultProps = {
-	type       : '',
-	orientation: '',
+    icon       : 'cog',
 	linkName   : Bio_card.link
 };
 

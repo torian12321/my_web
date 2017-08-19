@@ -1,4 +1,4 @@
-With [ReactIcons](https://www.npmjs.com/package/react-icons) the icons are converted into SVG, so there is no need to add external .css or .js libraries.
+With [ReactIcons](https://www.npmjs.com/package/react-icons) the icons are converted into SVG, so there is no need to add external .css or .js libraries. [More](https://andy-pro.github.io/icon-viewer/)
 
 Check available icons from [the list](https://gorangajic.github.io/react-icons/index.html)
 

@@ -2,6 +2,7 @@
 	"bio": [
 		{
 			"type"       : "job",
+			"icon"       : "cog",
 			"name"       : "XWERX",
 			"title"      : "Web Developer",
 			"date"       : "February 2015",
@@ -11,6 +12,7 @@
 			"desc"       : "Description"
 		},{
 			"type"       : "volunteer",
+			"icon"       : "heart",
 			"name"       : "Coder Dojo",
 			"title"      : "Mentor - Volunteer",
 			"date"       : "June 2015",
@@ -21,6 +23,7 @@
 			"desc"       : "I am a volunteer mentor and teacher at SWICN Computer Clubhouse Coder Dojo. I work with other mentors to teach code to a class of 15 - 20 kids aged 8 to 14 years old at the Clubhouse in Dublin 8. We teach HTML, CSS, Javascript and Processing. It is generally happy chaos with great kids and great fellow mentors."
 		},{
 			"type"       : "course",
+			"icon"       : "cog",
 			"name"       : "Udemy",
 			"title"      : "Angular",
 			"date"       : "June 2015",
@@ -30,6 +33,7 @@
 			"desc"       : "Description"
 		},{
 			"type"       : "language",
+			"icon"       : "chat",
 			"name"       : "MEC School",
 			"title"      : "General English course",
 			"date"       : "Jan 2014 – July 2014",
@@ -38,6 +42,7 @@
 			"desc"       : "Description"
 		},{
 			"type"       : "job",
+			"icon"       : "cog",
 			"name"       : "Open Traffic System",
 			"title"      : "Software Developer",
 			"date"       : "Nov 2011 – Apr 2013",
@@ -48,6 +53,7 @@
 			"desc"       : "Description"
 		},{
 			"type"       : "formation",
+			"icon"       : "graduation",
 			"name"       : "UPC - University",
 			"title"      : "Technical Engineering in Telecommunications",
 			"date"       : "Jul 2010 – Jan 2014",
@@ -57,6 +63,7 @@
 			"desc"       : "Description"
 		},{
 			"type"       : "job",
+			"icon"       : "cog",
 			"name"       : "Accenture",
 			"title"      : "Support internship",
 			"date"       : "April 2011 – Oct 2011",
