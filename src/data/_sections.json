@@ -1,32 +1,32 @@
 {
 	"home": {
 	 	"id"   : "👾",
-		"name" : "home",
+		"icon" : "home",
 		"title": "Home"
 	},
 	"profile": {
 		"id"   : "🍆",
-		"name" : "profile",
+		"icon" : "calendar",
 		"title": "Profile"
 	},
 	"biography": {
 		"id"   : "🌵",
-		"name" : "bio",
+		"icon" : "chevron",
 		"title": "Bio"
 	},
 	"skills": {
 		"id"   : "🏆",
-		"name" : "skills",
+		"icon" : "star",
 		"title": "Skills"
 	},
 	"portfolio": {
 		"id"   : "🐧",
-		"name" : "portfolio",
+		"icon" : "warning",
 		"title": "Portfolio"
 	},
 	"contact": {
 		"id"   : "📩",
-		"name" : "contact",
+		"icon" : "mail",
 		"title": "Contact"
 	}
 }

@@ -6,7 +6,7 @@ Icon      = require('Icon');
 const Menu_panelOption = props =>(
 	<li>
 		<a href= { '#'+props.id } className= { props.name }>
-			<Icon /> { props.title }
+			<Icon name={props.icon} /> { props.title }
 		</a>
 	</li>		
 );
@@ -14,11 +14,10 @@ const Menu_panelOption = props =>(
 Menu_panelOption.propTypes = {
 	//children: PropTypes.string.isRequired,
     id      : PropTypes.string.isRequired,
-    name    : PropTypes.string
+    icon    : PropTypes.string
 };
 Menu_panelOption.defaultProps = {
-    id  : '',
-    name: ''
+    id  : ''
 };
 
 
