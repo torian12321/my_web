@@ -31,7 +31,7 @@ module.exports = {
 			"tags" : ["developments", "wordpress", "bootstrap"]
 		},{
 			"title": "Aviva - Best doctors",
-			"desc" : "Aviva experts mdical advice",
+			"desc" : "Aviva experts medical advice",
 			"img"  : img_aviva_BD,
 			"link" : "http://www.avivaincomeprotection.ie/bestdoctors/",
 			"tags" : ["scroll", "effects", "responsibe", "bootstrap"]
