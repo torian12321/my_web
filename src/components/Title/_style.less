@@ -11,25 +11,22 @@
     margin     : 0 auto 60px;
     position   : relative;
     text-align : center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     &:before,
     &:after{
         content   : '';
         position  : absolute;
-        //width     : 80%;
-        width     : 8em;
+        width     : 6em;
         height    : @line_h;
         background: @themeColor_2;
-        left: 50%;
+        left      : 50%;
     }
     &:before{
-        //left  : 0;
         bottom: -@line_h;
-        margin-left: -3em;
+        margin-left: -2em;
     }
     &:after{
-        //right : 0;
         bottom: -@line_h * 3;
-        margin-left: -5em;
+        margin-left: -4em;
     }
 }

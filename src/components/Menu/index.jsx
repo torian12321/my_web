@@ -10,19 +10,13 @@ class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isVisible: this.props.isHidden,
+            isVisible: this.props.isVisible,
             isOpen   : this.props.isOpen            
         };
     }
     toggleSlide(){
         this.setState({
             isOpen: !this.state.isOpen,
-        });
-    }
-    toggleVisibility(){
-        // Togle on scroll
-        this.setState({
-            isVisible: !this.state.isOpen,
         });
     }
     render() {

@@ -86,3 +86,32 @@
 @BWidth  : 1px;
 @BColor  : @themeColor_2;
 @border  : @BStyle @BWidth @BColor;
+
+
+//-------------------
+//-- Font families --
+//-------------------
+@baseFontSize: 16px;
+
+//@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Lobster);
+.font(){
+    font-family: 'Lato', sans-serif;
+}
+.font-regular(){
+	font-weight: 400;
+}
+.font-bold(){
+	font-weight: 700;
+}
+
+//Special
+.font_elegant(){
+    font-family: 'Lobster', cursive;
+}
+.font_icons(){
+	font-family: 'fontello';
+}
+.icon(@code: '\e820'){
+    content: @code;
+    .font_icons();
+}
