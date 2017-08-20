@@ -1,24 +1,38 @@
 var
 React     = require('react'),
-PropTypes = require('prop-types');
+PropTypes = require('prop-types'),
+Icon      = require('Icon'),
+{ Column }= require('Grid');
 
 const Contact_link = props =>(
-	<a
-	    target    = "_blank"
-	    href      = { props.link }
-	    className = { 'xs-4 sm-6 md-12 c-contact ' + props.type }>
-	    { props.children }
-	</a>
+	<Column xs={12} sm={6} md={12} className='c-contact'>
+		<Wrapper link={props.link} htmlFor={props.htmlFor}>
+			<div className='icon-wrapper'>
+				<Icon name={props.icon} />
+			</div>
+			<span>{ props.text }</span>
+		</Wrapper>
+	</Column>
 );
+
+ 
+const Wrapper = props =>(
+	props.link ?
+		<a     href   ={props.link} target= "_blank" >{props.children}</a> :
+		<label htmlFor={props.htmlFor}>{props.children}</label>
+	
+);
+
+
 Contact_link.propTypes = {
-	children: PropTypes.string.isRequired,
-	type    : PropTypes.string.isRequired,
-	link    : PropTypes.string.isRequired
+	text   : PropTypes.string.isRequired,
+	icon   : PropTypes.string,
+	link   : PropTypes.string,
+	htmlFor: PropTypes.string
 };
 Contact_link.defaultProps = {
-    children: '',
-    type    : 'text',
-    link    : '#'
+    icon   : 'mail',
+	htmlFor: 'form-name'
 };
 
 module.exports = Contact_link;

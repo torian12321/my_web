@@ -35,13 +35,17 @@
         box-sizing: border-box;
         outline   : 0;
         resize    : vertical;
-        background: @white;
+        background: fadeout(@white, 40%);
         .smart-text-color(@white);
+        .transition(background);
 
         // Border Effect
-        &:focus ~ label,
-        &:hover ~ label{
-            color: @themeColor_1;
+        &:focus,
+        &:hover{
+            background: fadeout(@white, 20%);
+            & ~ label{
+                color: @themeColor_1;
+            }
         }
         &:focus ~ span {
             left : 0;

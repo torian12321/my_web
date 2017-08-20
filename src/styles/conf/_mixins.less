@@ -207,10 +207,11 @@
 	-webkit-background-size: @size;
 }
 .background-parallax(
-    @BG-url   : '@{defImgDir}/img.png';
+    //@BG-url   : '@{defImgDir}/img.png';
     @position : center center;
     ){
-	background: url(@BG-url) @position no-repeat fixed;
+	//background: url(@BG-url) @position no-repeat fixed;
+	background: @position no-repeat fixed;
 	.background-cover();
 }
 .background-cover{

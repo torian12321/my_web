@@ -23,7 +23,7 @@ class Menu extends React.Component {
         return (
             <div
                 className={classNames(
-                    '🦄',
+                    '🍔',
                     !this.state.isVisible ? ' hidden' : null,
                     this.state.isOpen     ? ' active' : null
                 )}

@@ -1,0 +1,56 @@
+@import '~LESS_conf';
+
+.section-contact{
+    .background-parallax();
+    .contact-chanels{
+        margin-top: 32px;
+        .c-contact{
+            position  : relative;
+            background: fadeout(@white, 40%);
+            height    : 50px;
+            margin    : 0 0 32px;
+
+            a, label{
+                position: absolute;
+                top     : 0;
+                bottom  : 0;
+                left    : 0;
+                right   : 0;
+                color   : @themeColor_1;
+                cursor  : pointer;
+                .font-bold();
+                .icon-wrapper{
+                    display   : inline-block;
+                    height    : 100%;
+                    width     : 50px;
+                    margin    : 0 20px 0 0;
+                    background: @themeColor_1;
+                    font-size : 24px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    padding   : 12px;
+                    vertical-align: middle;
+                    .transition(margin);
+                    .icon{
+                        fill: @white;
+                    }
+                }
+
+                &:hover .icon-wrapper{
+                    margin: 0 50px 0 0;
+                }
+            }
+        }
+    }
+
+    .formField_content{
+        margin-bottom: 28px;
+        textarea{
+            resize: none;
+            height: 132px;
+        }
+    }
+    button{
+        height: 50px;
+    }
+}

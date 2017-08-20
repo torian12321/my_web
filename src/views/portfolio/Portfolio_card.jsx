@@ -6,7 +6,7 @@ styles    = require('./_style.less');
 
 const Portfolio_card = props => {
 	const divStyle = {
-	  backgroundImage: 'url(' + props.img + ')',
+	  backgroundImage: `url(${ props.img })`
 	};
 
 	return(

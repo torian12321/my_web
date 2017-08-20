@@ -1,61 +1,68 @@
 var
-React            = require('react'),
-PropTypes        = require('prop-types'),
-Input            = require('Input'),
-
-Test = require ('./test.jsx'),
-Button           = require('Button'),
-Contact_textArea = require('./Contact_textArea.jsx'),
-Contact_input    = require('./Contact_input.jsx');
+React     = require('react'),
+PropTypes = require('prop-types'),
+Input     = require('Input'),
+Textarea  = require('Textarea'),
+Button    = require('Button'),
+{ Column }= require('Grid');
 
 class Contact_form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-			isValid: true,
-			name   : 'name',
+			isValid: false,
+			name   : '',
 			email  : '',
 			content: ''           
         };
     }
-    change(){
-    	console.log('changeee ' + this.state.name);
+    updateName(name){
+        this.setState({ name });
+        this.validateForm();
+    }
+    updateEmail(email){
+        this.setState({ email });
+        this.validateForm();
+    }
+    updateContent(content){
+        this.setState({ content });
+        this.validateForm();
     }
 
-    termChange(term){
-        this.setState({
-            content: term
-        });
-
-        console.log(this.state.name);
-    }
     validateForm(){
-        let valid = true;
-
-        console.log('validating field');
-        return valid;
+        let isValid = false;
+        if(
+            this.state.name.trim()    == "" ||
+            this.state.email.trim()   == "" ||
+            this.state.content.trim() == ""
+        ){
+            isValid = false;
+        }else{
+            isValid = true;
+        }
+        this.setState({ isValid });
     }
     sendEmail(e){
         e.preventDefault();
-        if(this.validateForm()){
-            console.log('sending mail');
-        }
+        
+        // console.log('sending mail');
+        // var link = "mailto:aitorpalomares@gmail.com"
+        // + "&subject=" + escape("This is my subject")
+        // + "&body=" + this.state.content
+        ;
+        window.location.href = link;
+
     }
     render() {
         return (
+            <Column xs={12} md={6} md_push={6}>
             <form
-				className    = "xs-12 md-6 md-push-6"
-				onSubmit     = "return preventDefault()"
-				autoComplete = "off"
-				name         = "mailForm">
-<Test onChange={term => this.termChange(term)} />
-<Input onChange={ this.change(this.state.name) }>{ this.state.name }</Input>
+				onSubmit     = {false}
+				autoComplete = "off">
 
-
-
-				<Contact_input id="name" onChange={ this.change.bind(this) }>Name</Contact_input>
-				<Contact_input id="email">Email</Contact_input>
-				<Contact_textArea id="content">Content</Contact_textArea>
+				<Input    placeholder='Name'    onChange={ this.updateName.bind(this) } id='form-name' />
+				<Input    placeholder="Email"   onChange={ this.updateEmail.bind(this) } />
+				<Textarea placeholder="Content" onChange={ this.updateContent.bind(this) } className='formField_content' />
                 <Button 
                     onClick  = { this.sendEmail.bind(this) }
                     className= "xs-12"
@@ -63,6 +70,7 @@ class Contact_form extends React.Component {
                     >Send email
                 </Button>
             </form>
+            </Column>
         );
     }
 }

@@ -7,7 +7,7 @@ Title      = require('Title'),
 styles     = require('./_style.less');
 
 const Section = props => (
-    <section id={ props.id } className={classNames('section', props.className)}>
+    <section id={ props.id } className={classNames('section', props.className)} style={props.style}>
     	{ props.title ? <Title>{ props.title }</Title> : null }
         <Grid>
             <Row>{ props.children }</Row>
@@ -17,9 +17,10 @@ const Section = props => (
 
 Section.propTypes = {
     children : PropTypes.any.isRequired,
+    className: PropTypes.string,
+    style    : PropTypes.node,
     id       : PropTypes.string,
-    title    : PropTypes.string,
-    className: PropTypes.string
+    title    : PropTypes.string
 };
 
 module.exports = Section;

@@ -1,37 +1,31 @@
-var
-React          = require('react'),
-PropTypes      = require('prop-types'),
-GreeterMessage = require('./GreeterMessage.jsx'),
-GreeterForm    = require('./GreeterForm.jsx');
+var 
+React        = require('react'),
+PropTypes    = require('prop-types'),
+Section      = require('Section'),
+{ Column }   = require('Grid'),
+data         = require('data'),
+Contact_link = require('./Contact_link'),
+Contact_form = require('./Contact_form'),
+BG           = require('./bg.jpg'),
+style        = require('./_style');
 
-var Greeter = React.createClass({
-	getDefaultProps: function(){
-		return{
-			name   : 'User',
-			message: 'This is my default message'
-		};
-	},
-	getInitialState: function(){
-		return{
-			name   : this.props.name,
-            message: this.props.message
-		};
-	},
-	handleNewData: function(updates){
-		this.setState(updates);
-	},
-	render: function(){
-		var
-		name    = this.state.name,
-		message = this.state.message;
+const ViewContact = props =>(
+	<Section { ...props.sectionConf } className="section-contact" style={{backgroundImage: `url(${ BG })`}}>
+        <Contact_form />
 
-		return (
-			<div>
-				<GreeterMessage name={name} message={message}/>
-				<GreeterForm onNewData={this.handleNewData}/>
-			</div>
-		);
-	}
-});
+        <Column xs={12} md={6} md_pull={6} className="contact-chanels">
+            { props.contacts.map(contact => <Contact_link {...contact} key={contact.name} /> ) }
+        </Column>
+	</Section>
+);
 
-module.exports = Greeter;
+ViewContact.propTypes = {
+    sectionConf: PropTypes.object,
+    contacts   : PropTypes.array
+};
+ViewContact.defaultProps = {
+    sectionConf: data.menu.contact,
+    contacts   : data.contacts
+};
+
+module.exports = ViewContact;

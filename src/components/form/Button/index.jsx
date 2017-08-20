@@ -11,7 +11,8 @@ const Button = props => (
             !props.flat ? 'btn-3D'             : null,
             props.large ? 'btn-large'          : null,
             props.color ? `btn-${props.color}` : null,
-            props.type  ? `btn-${props.type}`  : null
+            props.type  ? `btn-${props.type}`  : null,
+            props.className
         )}
         onClick  = {props.onClick}
         disabled = {props.disabled}
@@ -22,13 +23,14 @@ const Button = props => (
 
 
 Button.propTypes = {
-    children: PropTypes.any,
-    disabled: PropTypes.bool,
-    flat    : PropTypes.bool,
-    large   : PropTypes.bool,
-    color   : PropTypes.oneOf(['main', 'sec', 'green', 'red', 'blue', 'white', 'grey', 'black']),
-    type    : PropTypes.oneOf(['success', 'danger', 'warning']),
-    onClick : PropTypes.func
+    children : PropTypes.any,
+    className: PropTypes.string,
+    disabled : PropTypes.bool,
+    flat     : PropTypes.bool,
+    large    : PropTypes.bool,
+    color    : PropTypes.oneOf(['main', 'sec', 'green', 'red', 'blue', 'white', 'grey', 'black']),
+    type     : PropTypes.oneOf(['success', 'danger', 'warning']),
+    onClick  : PropTypes.func
 };
 Button.defaultProps = {
     children : 'Submit',
