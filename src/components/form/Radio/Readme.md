@@ -1,6 +1,0 @@
-#### Basic
-```
-<div>
-    <Radio />
-</div>
-```
