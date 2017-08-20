@@ -9,7 +9,7 @@
 			"location"   : "Dublin",
 			"link"       : "http://www.xwerx.com",
 			"linkName"   : "www.xwerx.com",
-			"desc"       : "Description"
+			"desc"       : "Xwerx is a User Experience Design agency headquartered at The Digital Hub, helping companies to build outstanding user experiences for their online products. Through 15 years of expansion, xwerx has become Ireland’s leading User Experience Design agency."
 		},{
 			"type"       : "volunteer",
 			"icon"       : "heart",
@@ -23,7 +23,7 @@
 			"desc"       : "I am a volunteer mentor and teacher at SWICN Computer Clubhouse Coder Dojo. I work with other mentors to teach code to a class of 15 - 20 kids aged 8 to 14 years old at the Clubhouse in Dublin 8. We teach HTML, CSS, Javascript and Processing. It is generally happy chaos with great kids and great fellow mentors."
 		},{
 			"type"       : "course",
-			"icon"       : "cog",
+			"icon"       : "book",
 			"name"       : "Udemy",
 			"title"      : "Angular",
 			"date"       : "June 2015",
@@ -53,7 +53,7 @@
 			"desc"       : "Description"
 		},{
 			"type"       : "formation",
-			"icon"       : "graduation",
+			"icon"       : "library",
 			"name"       : "UPC - University",
 			"title"      : "Technical Engineering in Telecommunications",
 			"date"       : "Jul 2010 – Jan 2014",
