@@ -23,7 +23,7 @@ const Menu_panel = props =>(
 Menu_panel.propTypes = {
     isOpen: PropTypes.bool.isRequired,
 	items : PropTypes.array.isRequired,
-	img   : PropTypes.array.any,
+	img   : PropTypes.string,
 };
 Menu_panel.defaultProps = {
     isOpen: false,

@@ -14,7 +14,7 @@ const ViewContact = props =>(
         <Contact_form />
 
         <Column xs={12} md={6} md_pull={6} className="contact-chanels">
-            { props.contacts.map(contact => <Contact_link {...contact} key={contact.name} /> ) }
+            { props.contacts.map((contact, i) => <Contact_link {...contact} key={i} /> ) }
         </Column>
 	</Section>
 );

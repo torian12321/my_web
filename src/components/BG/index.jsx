@@ -8,7 +8,7 @@ const BG = props => {
     let balls = [];
 
     for(let i=0; i < 20; i++){
-        balls.push( <Ball /> );
+        balls.push( <Ball key={i}/> );
     }
 
     return(
