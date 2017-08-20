@@ -1,5 +1,4 @@
-var
-Sketch     = require('./sketch.min.js');
+var Sketch = require('./sketch.min.js');
 
 /*
 Bouncing Balls by Rob Glazebrook
