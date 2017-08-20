@@ -1,0 +1,187 @@
+@import '~LESS_conf';
+
+@menu_z: 500;
+@menu_w: 300px;
+
+.🍔{
+.menu-opener{
+  font-size  : 50px;
+  position   : fixed;
+  right      : 20px;
+  top        : 20px;
+  width      : 1em;
+  height     : 1em;
+  background : @red;
+  cursor     : pointer;
+  z-index    : @menu_z + 10;
+  overflow   : hidden;
+  .rounded(50%);
+  .shadow();
+  .transition(opacity);
+  div{
+      position  : absolute;
+      display   : block;
+      left      : .235em;
+      width     : .55em;
+      height    : .05em;
+      background: @white;
+      .transition();
+      .rounded(.05em);
+      &:nth-child(1){ top: .3em; }
+      &:nth-child(2){ top: .5em; }
+      &:nth-child(3){ top: .7em}
+  }
+
+    &.active{
+        div{
+            // Center bar out of circle
+            &:nth-child(2){ left: 1em;}
+
+            // Create X shape
+            &:nth-child(1),
+            &:nth-child(3){ top: .5em; }
+            &:nth-child(3){ .transform(rotate(45deg));  }
+            &:nth-child(1){ .transform(rotate(-45deg)); }
+        }
+    }
+}
+
+.menu-wrap{
+    // http://codepen.io/jeffmccarthyesq/pen/LEEKLZ?editors=0100
+
+    position  : fixed;
+    overflow  : hidden;
+    top       : 0%;
+    width     : @menu_w;
+    height    : 100vh;
+    left      : 0;
+    padding   : 0;
+    display   : block;
+    visibility: hidden;
+    z-index   : @menu_z;
+    transform : translate(-50px);
+    transition: all 0.5s;
+    .menu-content{
+        opacity: 0;
+        height : 100vh;
+    }
+    .img{
+        width : 100%;
+        height: 200px;
+        background: center center no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+    }
+    ul{
+        @conSize : 30px;
+        @gutter_x: 15px;
+        @gutter_y: 10px;
+
+        padding: 0;
+        margin : 0;
+        li{
+            padding: 0;
+            margin: 0;
+            a{
+                @color_text: fadeout(@black, 30%);
+
+                position     : relative;
+                display      : block;
+                padding      : 0 15px;
+                cursor       : pointer;
+                z-index      : 1;
+                font-size    : 1.5em;
+                line-height  : @conSize + (@gutter_y * 2);
+                color        : @color_text;
+                border-bottom: @color_text solid 1px;
+                font-weight  : bold;
+                text-decoration: none;
+                .transition(color);
+                &:after{
+                    // expandable BG
+                    position  : absolute;
+                    content   : '';
+                    top       : 0;
+                    bottom    : 0;
+                    left      : 0;
+                    width     : 8px;
+                    z-index   : -1;
+                    opacity   : 0.8;
+                    background: darken(@themeColor_1, 10%);
+                    .transition(width);
+                }
+                svg{
+                    position: relative;
+                    top     : 3px;
+                    margin  : 0 6px;
+                    fill    : @color_text;
+                    .transition();
+                }
+            }
+            &.active,
+            &:hover a{
+                color : @white;
+                svg{
+                    fill: @white;
+                }
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &:before {
+        // Backgroun with boble effect
+        content   : "";
+        position  : absolute;
+        width     : 0;
+        height    : 0;
+        background: darken(@white, 10%);;
+        left      : 0;
+        top       : 10%;
+        -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        .rounded(50%);
+    }
+
+    // Open
+    &.active{
+        display   : block;
+        visibility: visible;
+        transform : translateZ(0px);
+        transition: all 0.5s;
+        .shadow();
+        .menu-content {
+            position: relative;
+            z-index : 1;
+            opacity : 1;
+            transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        &:before {
+            @size: 200vmax;
+
+            display    : block;
+            top        : 50%;
+            left       : 0;
+            height     : @size;
+            width      : @size;
+            margin-left: -@size / 2;
+            margin-top : -@size / 2;
+            -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+    }
+}
+
+
+.menu-footer{
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    right      : 0;
+    text-align : center;
+    line-height: 2;
+    background: fadeout(@black, 80%);
+}
+}

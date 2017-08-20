@@ -1,0 +1,32 @@
+@import '~LESS_conf';
+
+.title{
+    @line_h: .1em;
+
+    font-size  : 1.8em;
+    line-height: 1.25em;
+    color      : @themeColor_1;
+    font-weight: 700;
+    max-width  : 250px;
+    margin     : 0 auto 60px;
+    position   : relative;
+    text-align : center;
+    text-transform: capitalize;
+    &:before,
+    &:after{
+        content   : '';
+        position  : absolute;
+        width     : 6em;
+        height    : @line_h;
+        background: @themeColor_2;
+        left      : 50%;
+    }
+    &:before{
+        bottom: -@line_h;
+        margin-left: -4em;
+    }
+    &:after{
+        bottom: -@line_h * 3;
+        margin-left: -2em;
+    }
+}

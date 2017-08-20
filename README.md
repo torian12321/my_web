@@ -1,20 +1,17 @@
 ## Aitor website
 
-Just a repository for [my own website](http://torian12321.github.io/my_web/dist/) ;)
+Just a repository for [my own website](http://torian12321.github.io/my_web/dist/)
 
-New version using my [webTemplate](https://github.com/torian12321/webTemplate), to create a new more optimezed version
+New version using my [React boilerplate](https://github.com/torian12321/React-test), to create a new more optimezed version
 
 
 ## Technologies
 
-- [vanilla-js](http://vanilla-js.com/)
+- [React](https://facebook.github.io/react/)
 - [LESS](http://lesscss.org/)
-- [KaleyStyleguide](https://github.com/thomasdavis/kaleistyleguide)
-- [Fontello](http://fontello.com/)
-- [Gulp](http://gulpjs.com/)
 - [PWA](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
 
 
 ## Autor
 
-[Aitor](http://aitorpalomares.esy.es/)
+[Aitor](https://github.com/torian12321/my_web/dist/)
