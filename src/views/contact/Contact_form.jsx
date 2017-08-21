@@ -54,32 +54,22 @@ class Contact_form extends React.Component {
 
     }
 
-    sendEmail(e){
-        e.preventDefault()
+    sendEmail = (e) => {
+        
 
-        fetch('/contactus', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                from: 'contact@mail.com',
-                email: 'aitorpalomares@gmail.com',
-                body : 'Hello from react'
-            // then continue this with the other inputs, such as email body, etc.
-            })
-        })
-        .then((response) => response.json())
-        .then((responseJson) => {
-            if (responseJson.success) {
-                this.setState({formSent: true})
-            } else this.setState({formSent: false})
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    }
+        e.preventDefault();
+
+        const url= "//formspree.io/aitorpalomares@gmail.com";
+        
+        //const {name, email, message} = this.refs
+        const formData = new FormData();
+        formData.append("name", this.state.name);
+        formData.append("email", this.state.email);
+        formData.append("message", this.state.content);
+        const req = new XMLHttpRequest();
+        req.open('POST', url);
+        req.send(formData);
+      }
 
 
     render() {
