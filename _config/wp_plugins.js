@@ -65,7 +65,7 @@ module.exports = (outDir, isProd) => {
         }
       }),
       new SWPrecache({
-        minify: true,
+        minify: false,
 				filename: 'service-worker.js',
 				dontCacheBustUrlsMatching: /./,
 				navigateFallback: 'index.html',
