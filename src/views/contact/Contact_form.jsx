@@ -42,7 +42,7 @@ class Contact_form extends React.Component {
         }
         this.setState({ isValid });
     }
-    sendEmail(e){
+    sendEmail_1(e){
         e.preventDefault();
         
         // console.log('sending mail');
@@ -53,6 +53,35 @@ class Contact_form extends React.Component {
         window.location.href = link;
 
     }
+
+    sendEmail(e){
+        e.preventDefault()
+
+        fetch('/contactus', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                from: 'contact@mail.com',
+                email: 'aitorpalomares@gmail.com',
+                body : 'Hello from react'
+            // then continue this with the other inputs, such as email body, etc.
+            })
+        })
+        .then((response) => response.json())
+        .then((responseJson) => {
+            if (responseJson.success) {
+                this.setState({formSent: true})
+            } else this.setState({formSent: false})
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }
+
+
     render() {
         return (
             <Column xs={12} md={6} md_push={6}>
