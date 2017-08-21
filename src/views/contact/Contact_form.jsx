@@ -42,7 +42,7 @@ class Contact_form extends React.Component {
         }
         this.setState({ isValid });
     }
-    sendEmail_1(e){
+    sendEmail(e){
         e.preventDefault();
         
         // console.log('sending mail');
@@ -53,25 +53,6 @@ class Contact_form extends React.Component {
         window.location.href = link;
 
     }
-
-    sendEmail = (e) => {
-        
-
-        e.preventDefault();
-
-        const url= "//formspree.io/aitorpalomares@gmail.com";
-        
-        //const {name, email, message} = this.refs
-        const formData = new FormData();
-        formData.append("name", this.state.name);
-        formData.append("email", this.state.email);
-        formData.append("message", this.state.content);
-        const req = new XMLHttpRequest();
-        req.open('POST', url);
-        req.send(formData);
-      }
-
-
     render() {
         return (
             <Column xs={12} md={6} md_push={6}>
