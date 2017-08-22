@@ -1,26 +1,19 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Icon      = require('Icon'),
-styles    = require('./_style.less');
+import React 		from 'react';
+import PropTypes 	from 'prop-types';
+import Icon 		from 'Icon';
+import styles 		from './_style';
 
-const Portfolio_card = props => {
-	const divStyle = {
-	  backgroundImage: `url(${ props.img })`
-	};
-
-	return(
-	    <Wrapper 
-	    	className= "c-product"
-	    	style    = { divStyle }
-	    	href     = { props.link }
-	    >
-			{ props.link  ? <div className="link"><Icon name="link" /></div> : null }
-			{ props.title ? <h1>{ props.title }</h1> : null }
-			{ props.desc  ? <span className="desc">{props.desc }</span> : null }
-		</Wrapper>
-	);
-};
+const Portfolio_card = props => (
+	<Wrapper 
+		className= "c-product"
+		style    = {{ backgroundImage: `url(${ props.img })` }}
+		href     = { props.link }
+	>
+		{ props.link  ? <div className="link"><Icon name="link" /></div> : null }
+		{ props.title ? <h1>{ props.title }</h1> : null }
+		{ props.desc  ? <span className="desc">{props.desc }</span> : null }
+	</Wrapper>
+);
 
 const Wrapper = props => (
 	props.href ?

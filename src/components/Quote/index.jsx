@@ -1,8 +1,7 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-styles    = require('./_style.less'),
-Icon      = require('Icon');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from 'Icon';
+import styles from './_style';
 
 const Quote = props =>(
     <section className="💬">

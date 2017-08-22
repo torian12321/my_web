@@ -1,10 +1,9 @@
-var
-React      = require('react'),
-PropTypes  = require('prop-types'),
-classNames = require('classnames'),
-Title      = require('Title'),
-{Grid, Row}= require('Grid'),
-styles     = require('./_style.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Title from 'Title';
+import {Grid, Row} from 'Grid';
+import styles from './_style';
 
 const Section = props => (
     <section id={ props.id } className={classNames('section', props.className)} style={props.style}>

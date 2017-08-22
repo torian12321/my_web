@@ -1,8 +1,7 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Rating    = require('Rating'),
-{ Column }= require('Grid');
+import React 		from 'react';
+import PropTypes 	from 'prop-types';
+import Rating 		from 'Rating';
+import { Column }   from 'Grid';
 
 const Skill = props => (
     <Column xs={12} sm={6} className="skill">
@@ -13,14 +12,12 @@ const Skill = props => (
 
 Skill.propTypes = {
     children: PropTypes.any.isRequired,
-    type    : PropTypes.string.isRequired,
-    val     : PropTypes.number.isRequired,
-    val_max : PropTypes.number.isRequired
+    type    : PropTypes.string,
+    val     : PropTypes.number
 };
 Skill.defaultProps = {
-	type   : 'star',        // star | cog | lang
-	val    : 0,
-	val_max: 5
+	type: 'star',        // star | cog | lang
+	val : 0
 };
 
 module.exports = Skill;

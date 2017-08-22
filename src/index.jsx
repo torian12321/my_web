@@ -1,13 +1,12 @@
-var
-React    = require('react'),
-ReactDOM = require('react-dom'),
-Main     = require('./views/Main'),
-styles   = require('./styles'),
-scripts  = require('./scripts');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Main from './views/Main';
+import styles from './styles';
+import scripts from './scripts';
 
 ReactDOM.render(
   <Main />,
-  document.getElementById('root')
+  document.getElementById('🎃')
 );
 
 if (process.env.NODE_ENV === 'production') {

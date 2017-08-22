@@ -1,10 +1,10 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Section   = require('Section'),
-data      = require('data'),
-BioCard   = require('./Bio_card.jsx'),
-styles    = require('./_style.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Section from 'Section';
+import BioCard from './Bio_card';
+import styles from './_style';
+
+const data = require('data');
 
 const ViewBio = props =>(
     <Section { ...props.sectionConf }>

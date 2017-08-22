@@ -1,7 +1,6 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-{ Row }   = require('Grid');
+import React 		from 'react';
+import PropTypes 	from 'prop-types';
+import { Row } 		from 'Grid';
 
 const Profile_attribute = props =>(
     <Row>

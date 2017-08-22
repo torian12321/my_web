@@ -1,13 +1,12 @@
-const
-img_aviva_MTG = require('./imgs/aviva_mtg.jpg'),
-img_xwerx     = require('./imgs/xwerx.jpg'),
-img_uxdesign  = require('./imgs/uxdesign.jpg'),
-img_aviva_BD  = require('./imgs/aviva_bd.jpg'),
-img_top       = require('./imgs/top.jpg'),
-img_thorntons = require('./imgs/thortons.jpg'),
-img_integra   = require('./imgs/integra.jpg'),
-img_raccoon   = require('./imgs/raccoon.jpg'),
-img_hoja      = require('./imgs/hoja.jpg');
+import img_aviva_MTG    from './imgs/aviva_mtg.jpg';
+import img_xwerx 		from './imgs/xwerx.jpg';
+import img_uxdesign     from './imgs/uxdesign.jpg';
+import img_aviva_BD     from './imgs/aviva_bd.jpg';
+import img_top      	from './imgs/top.jpg';
+import img_thorntons    from './imgs/thortons.jpg';
+import img_integra      from './imgs/integra.jpg';
+import img_raccoon      from './imgs/raccoon.jpg';
+import img_hoja      	from './imgs/hoja.jpg';
 
 module.exports = {
 	"proyects": [

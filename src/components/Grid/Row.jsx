@@ -1,7 +1,6 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const Row = props => (
     <div  className={classNames(

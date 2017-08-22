@@ -1,11 +1,9 @@
-const
-data_quotes   = require('./_quotes.json'),
-data_menu     = require('./_sections.json'),
-data_skills   = require('./_skills.json'),
-data_biography= require('./_biography.json'),
-data_contacts = require('./_contacts.json'),
-data_portfolio= require('./_portfolio');
-
+import data_quotes      from './_quotes.json';
+import data_menu        from './_sections.json';
+import data_skills      from './_skills.json';
+import data_biography   from './_biography.json';
+import data_contacts    from './_contacts.json';
+import data_portfolio   from './_portfolio';
 
 export const quotes    = data_quotes.quotes;
 export const menu      = data_menu;

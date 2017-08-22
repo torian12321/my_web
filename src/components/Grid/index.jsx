@@ -1,4 +1,4 @@
-const styles = require('./_style.less');
+import styles from './_style';
 
 export Grid   from './Grid';
 export Row    from './Row';

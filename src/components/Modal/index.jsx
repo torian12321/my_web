@@ -1,8 +1,6 @@
-var
-React    = require('react'),
-ReactDOM = require('react-dom'),
-Modal    = require('./modal');
-
+import React from 'react';
+import ReactDom from 'react-dom';
+import Modal from './modal';
 
 class ModalWrapper extends React.Component{
 	componentDidMount() {

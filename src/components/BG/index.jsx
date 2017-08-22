@@ -1,5 +1,4 @@
-var
-React = require('react'),
-styles= require('./_style.less');
+import React from 'react';
+import styles from './_style';
 
 module.exports = () => <div className="BG" />;

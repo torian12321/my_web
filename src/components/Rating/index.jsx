@@ -1,9 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-Icon      = require('Icon'),
-styles    = require('./_style.less');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import Icon from 'Icon';
+import styles from './_style';
 
 const Rating = props => {
     let
