@@ -1,0 +1,6 @@
+.npm-debug.log
+node_modules/
+public/
+app/inc/css/*
+app/inc/js/app.js
+app/inc/js/libs.js

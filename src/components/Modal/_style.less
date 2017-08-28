@@ -1,0 +1,57 @@
+@import '~LESS_conf';
+
+@modal-BG: @white;
+
+.modal,
+.modal-bg,
+.modal-container{
+    position: fixed;
+    top     : 0;
+    bottom  : 0;
+    right   : 0;
+    left    : 0;
+}
+
+.modal{
+    z-index: 1000;
+}
+.modal-bg{
+    background: fadeout(@black, 40%);
+}
+.modal-container{
+    position  : absolute;
+    top       : 20%;
+    left      : 50%;
+    bottom    : auto;
+    width     : 100vw;
+    max-width : 315px;
+    min-width : 200px;
+    min-height: 120px;
+    background: @modal-BG;
+    padding   : 24px 10px 10px;
+    box-sizing: border-box;
+    .rounded();
+    .animation_fadein();
+    .transform(translate(-50%, -50%));
+    .animation(
+        @animation : fadein;
+        @time      : .6s;
+        @iterations: 1;
+    );
+}
+.modal-content{
+    position: relative;
+}
+
+.close-icon{
+    position   : relative;  
+    top        : -14px;
+    right      : 0;
+    font-size  : 16px;
+    
+    float      : right;
+    // X icon
+    path{
+        fill: @modal-BG;
+    }
+}

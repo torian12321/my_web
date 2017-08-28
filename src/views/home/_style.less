@@ -1,0 +1,93 @@
+@import '~LESS_conf';
+
+.section-main{
+    @color_main: darken(@themeColor_1, 0%);
+    @color_sec : @themeColor_2;
+    //@title_h: 250px;
+    @title_w: 400px;
+
+    height    : 100vh;
+    min-height: 500px;
+    background: fadeout(@black, 85%);
+    font-size  : 64px;
+    text-align: center;
+    .title-main{
+        position   : absolute;
+        top        : 50%;
+        left       : 50%;
+        height     : 4em;
+        width      : 6em;
+        margin     : -2em auto 0 -3em;
+        padding    : .2em;
+        background : @color_sec;
+        color      : @white;
+        line-height: 1.2em;
+        text-shadow: 5px 5px 10px @themeColor_1;
+        .font_elegant();
+        span{
+            display   : block;
+            border-top: 2px solid @white;
+            font-size : 0.5em;
+            overflow  : hidden;
+        }
+
+        &:before,
+        &:after{
+            content  : '';
+            font-size: 5px;
+            width    : 124px;
+            height   : 124px;
+            border   : 1em solid @white;
+            position : absolute;
+        }
+        &:before{
+            top          : -2.5em;
+            left         : -2.5em;
+            border-bottom: 0;
+            border-right : 0;
+        }
+        &:after{
+            bottom     : -2.5em;
+            right      : -2.5em;
+            border-top : 0;
+            border-left: 0;
+        }
+
+        @media (max-width: @bp_xs){
+            font-size: 32px;
+        }
+    }
+
+    .goDown{
+        position   : absolute;
+        bottom     : 0;
+        left       : 50%;
+        font-size  : 75px; 
+        height     : 1em;
+        width      : 1em;
+        margin-left: -.5em;
+        text-align : center;
+        .icon {
+            font-size: 60px;
+            fill     : @white;
+            .animation(
+                @animation : indicateContent;
+                @time      : 7s;
+                @speedCurve: linear;
+                @iterations: infinite
+            );
+        }
+    }
+}
+
+.animation_keyframes(indicateContent, {.home_header_arrow-keyframes();});
+.home_header_arrow-keyframes(){
+	@position_ini: 0px;
+	0%   {margin-top: @position_ini; }
+	80%  {margin-top: @position_ini; }
+	85%  {margin-top: @position_ini+20; }
+	90%  {margin-top: @position_ini+10; }
+    95%  {margin-top: @position_ini+20; }
+    100% {margin-top: @position_ini; }
+}
+.home_header_arrow-keyframes();
