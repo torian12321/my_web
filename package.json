@@ -2,8 +2,8 @@
   "name": "interactive_resume",
   "description": "Aitor CV",
   "author": "Aitor",
-  "url": "http://torian12321.github.io/",
-  "version": "1.0.5d",
+  "url": "http://torian12321.github.io/dist",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/torian12321/my_web/dist"
