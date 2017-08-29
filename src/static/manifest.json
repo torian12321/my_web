@@ -1,13 +1,13 @@
 {
   "name"            : "Aitor",
   "short_name"      : "Aitor",
-  "description"     : "Interactive resume",
-  "theme_color"     : "#163b63",
+  "description"     : "Aitor - Interactive resume",
+  "theme_color"     : "#2a85ce",
   "background_color": "#FFFFFF",
-  "start_url"       : "./dist/index.html?launcher=true",
+  "start_url"       : "https://torian12321.github.io/dist/",
   "start_path"      : "./",
   "display"         : "standalone",
-  "orientation"     : "portrait",
+    "orientation"   : "portrait",
   "dir"             : "ltr",
   "icons"           :
   [
