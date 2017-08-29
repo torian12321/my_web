@@ -4,10 +4,10 @@
   "description"     : "Interactive resume",
   "theme_color"     : "#163b63",
   "background_color": "#FFFFFF",
-  "start_url"       : "index.html?launcher=true",
+  "start_url"       : "./index.html?launcher=true",
   "start_path"      : "./",
-  "display"         : "portrait",
-  "orientation"     : "landscape",
+  "display"         : "standalone",
+  "orientation"     : "portrait",
   "dir"             : "ltr",
   "icons"           :
   [
