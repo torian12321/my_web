@@ -7,7 +7,7 @@ scripts  = require('./scripts');
 
 ReactDOM.render(
   <Main />,
-  document.getElementById('root')
+  document.getElementById('🎃')
 );
 
 if (process.env.NODE_ENV === 'production') {
