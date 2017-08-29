@@ -6,7 +6,7 @@
   "background_color": "#FFFFFF",
   "start_url"       : "index.html?launcher=true",
   "start_path"      : "./",
-  "display"         : "standalone",
+  "display"         : "portrait",
   "orientation"     : "landscape",
   "dir"             : "ltr",
   "icons"           :
