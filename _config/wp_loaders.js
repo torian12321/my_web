@@ -1,4 +1,8 @@
 const path = require('path');
+const styles = require('./wp_loaders_styles');
+const ExtractText = require('extract-text-webpack-plugin');
+
+
 
 module.exports = [
     { test: /\.(jsx|js)$/, exclude: /(node_modules|bower_components)/, loader: 'babel-loader', query: {presets: ['react', 'es2015', 'stage-1']}},
@@ -10,16 +14,21 @@ module.exports = [
     { test: /\.(png|jpg)$/, loader: 'url-loader?limit=25000' },
     {
         test: /\.(css|less)$/,
-        use: [
-            {
-                loader: "style-loader"
-            },{
-                loader : "css-loader",
-                options: { sourceMap: process.env.NODE_ENV === 'development' }
-            },{
-                loader : "less-loader",
-                options: { sourceMap: process.env.NODE_ENV === 'development' }
-            }
-        ]
-    }
+        //use: isProd ? ExtractText.extract({ fallback:'style-loader', use:styles }) : styles
+        use: ExtractText.extract({ fallback:'style-loader', use:styles })
+    },
+    // {
+    //     test: /\.(css|less)$/,
+    //     use: [
+    //         {
+    //             loader: "style-loader"
+    //         },{
+    //             loader : "css-loader",
+    //             options: { sourceMap: process.env.NODE_ENV === 'development' }
+    //         },{
+    //             loader : "less-loader",
+    //             options: { sourceMap: process.env.NODE_ENV === 'development' }
+    //         }
+    //     ]
+    // }
 ];
