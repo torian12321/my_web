@@ -1,10 +1,9 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Input     = require('Input'),
-Textarea  = require('Textarea'),
-Button    = require('Button'),
-{ Column }= require('Grid');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Input        from 'Input';
+import Textarea     from 'Textarea';
+import Button       from 'Button';
+import Column  		from 'Grid';
 
 class Contact_form extends React.Component {
     constructor(props) {

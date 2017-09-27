@@ -1,11 +1,11 @@
-var 
-React     = require('react'),
-PropTypes = require('prop-types'),
-Section   = require('Section'),
-data      = require('data'),
-{ Row }   = require('Grid'),
-Skill     = require('./Skill.jsx'),
-styles    = require('./_style.less');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Section      from 'Section';
+import Row  		from 'Grid';
+import Skill  		from './Skill';
+import styles       from './_style';
+
+const data = require('data');
 
 const ViewSkills = props =>(
 	<Section { ...props.sectionConf }>

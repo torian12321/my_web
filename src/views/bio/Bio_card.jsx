@@ -1,7 +1,6 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Icon      = require('Icon');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Icon         from 'Icon';
 
 const Bio_card = props => (
     <div className={ 'c-bio ' + props.type + ' ' + props.orientation }>

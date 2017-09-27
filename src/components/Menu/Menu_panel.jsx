@@ -1,10 +1,9 @@
-var
-React            = require('react'),
-PropTypes        = require('prop-types'),
-Menu_panelOption = require('./Menu_panelOption'),
-BG_img           = require('./menu_header.jpg');
+import React        	from 'react';
+import PropTypes    	from 'prop-types';
+import Menu_panelOption from './Menu_panelOption';
+import BG_img       	from './menu_header.jpg';
 		
-const Menu_panel = props =>(
+const Menu_panel = props => (
     <div className={ 'menu-wrap ' + (props.isOpen ? 'active' : '') }>
 	    <div className="menu-content">
 

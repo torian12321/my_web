@@ -1,10 +1,9 @@
-var
-React      = require('react'),
-PropTypes  = require('prop-types'),
-classNames = require('classnames'),
-Menu_btn   = require('./Menu_btn'),
-Menu_panel = require('./Menu_panel'),
-styles     = require('./_style.less');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import classNames   from 'classNames';
+import Menu_btn     from './Menu_btn';
+import Menu_panel   from './Menu_panel';
+import styles       from './_style';
 
 class Menu extends React.Component {
     constructor(props) {

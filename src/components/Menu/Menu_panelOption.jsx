@@ -1,7 +1,6 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Icon      = require('Icon');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Icon   		from 'Icon';
 
 const Menu_panelOption = props =>(
 	<li>

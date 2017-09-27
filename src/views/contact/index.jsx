@@ -1,13 +1,13 @@
-var 
-React        = require('react'),
-PropTypes    = require('prop-types'),
-Section      = require('Section'),
-{ Column }   = require('Grid'),
-data         = require('data'),
-Contact_link = require('./Contact_link'),
-Contact_form = require('./Contact_form'),
-BG           = require('./bg.jpg'),
-style        = require('./_style');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Section      from 'Section';
+import Column  		from 'Grid';
+import BG  		    from './bg.jpg';
+import styles       from './_style';
+import Contact_link from './Contact_form';
+import Contact_form from './Contact_form';
+
+const data = require('data');
 
 const ViewContact = props =>(
 	<Section { ...props.sectionConf } className="section-contact" style={{backgroundImage: `url(${ BG })`}}>

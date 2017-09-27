@@ -1,5 +1,5 @@
-import fancyFunctions  from './fancyFunctions';
-import SmoothScroll  from './SmoothScroll';
+import fancyFunctions   from './fancyFunctions';
+import SmoothScroll     from './SmoothScroll';
 
 export default (function () {
     fancyFunctions();
