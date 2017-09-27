@@ -1,7 +1,7 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
 import Icon         from 'Icon';
-import Column  		from 'Grid';
+import {Column} 	from 'Grid';
 
 const Contact_link = props =>(
 	<Column xs={12} sm={6} md={12} className='c-contact'>

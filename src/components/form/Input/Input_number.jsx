@@ -1,9 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-styles    = require('./_style.less'),
-uniqid    = require('uniqid'),
-Wrapper   = require('../_wrapper');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import uniqid       from 'uniqid';
+import Wrapper      from '../_wrapper';
+import styles       from './_style';
 
 class Input extends React.Component {
     constructor(props) {
@@ -27,10 +26,10 @@ class Input extends React.Component {
     
     return (
         <Wrapper
-				id        = {id}
-				className = "styled-input-number"
-				label     = {this.props.placeholder}
-			>
+            id        = {id}
+            className = "styled-input-number"
+            label     = {this.props.placeholder}
+        >
 
 
         <div className="quantity-input">

@@ -3,7 +3,7 @@ import PropTypes    from 'prop-types';
 import Input        from 'Input';
 import Textarea     from 'Textarea';
 import Button       from 'Button';
-import Column  		from 'Grid';
+import {Column}  	from 'Grid';
 
 class Contact_form extends React.Component {
     constructor(props) {

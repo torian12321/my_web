@@ -1,10 +1,10 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
 import Section      from 'Section';
-import Column  		from 'Grid';
+import {Column}     from 'Grid';
 import BG  		    from './bg.jpg';
 import styles       from './_style';
-import Contact_link from './Contact_form';
+import Contact_link from './Contact_link';
 import Contact_form from './Contact_form';
 
 const data = require('data');
