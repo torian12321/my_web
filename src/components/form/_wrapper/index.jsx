@@ -1,10 +1,8 @@
 // Wrapper for text inputs and textAreas
-
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-styles    = require('./_style.less');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import classNames   from 'classNames';
+import styles       from './_style';
 
 const Wrapper = props => (
     <div className={classNames('styled-input', props.className)}>

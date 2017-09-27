@@ -1,13 +1,13 @@
-var
-React             = require('react'),
-PropTypes         = require('prop-types'),
-Section           = require('Section'),
-Avatar            = require('Avatar'),
-{ Column }        = require('Grid'),
-data              = require('data'),
-styles            = require('./_style.less'),
-AvatarImg         = require('./avatar.jpg'),
-Profile_attribute = require('./Profile_attribute');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Section      from 'Section';
+import Avatar       from 'Avatar';
+import {Column}     from 'Grid';
+import AvatarImg    from './avatar.jpg';
+import styles       from './_style';
+import Profile_attribute   from './Profile_attribute';
+
+const data = require('data');
 
 const Profile = props =>(
 	<Section { ...props.sectionConf }>

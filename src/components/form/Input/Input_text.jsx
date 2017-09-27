@@ -1,8 +1,7 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-uniqid    = require('uniqid'),
-Wrapper   = require('../_wrapper');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import uniqid       from 'uniqid';
+import Wrapper      from '../_wrapper';
 
 class Input extends React.Component {
 	constructor(props){

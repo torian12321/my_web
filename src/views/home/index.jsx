@@ -1,10 +1,10 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Section   = require('Section'),
-data      = require('data'),
-Icon      = require('Icon'),
-styles    = require('./_style.less');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Icon   		from 'Icon';
+import Section		from 'Section';
+import styles       from './_style';
+
+const data = require('data');
 
 const Home = props =>(
 	<Section id={props.sectionConf.id} className="section-main">

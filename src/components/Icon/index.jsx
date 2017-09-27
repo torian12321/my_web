@@ -1,8 +1,8 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-classNames= require('classnames'),
-icons     = require('./icons');
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import classNames from 'classnames';
+
+var icons = require('./icons');
 
 
 const Icon = props => {

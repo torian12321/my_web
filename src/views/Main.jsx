@@ -1,16 +1,18 @@
-var
-BG            = require('BG'),
-Menu          = require('Menu'),
-Quote         = require('Quote'),
-React         = require('react'),
-ViewBio       = require('./bio'),
-ViewContact   = require('./contact'),
-ViewHome      = require('./home'),
-ViewPortfolio = require('./portfolio'),
-ViewProfile   = require('./profile'),
-ViewSkills    = require('./skills'),
-dataMenu      = require('data').menu,
-quotes        = require('data').quotes;
+import React            from 'react';
+import PropTypes        from 'prop-types';
+import BG               from 'BG';
+import Menu             from 'Menu';
+import Quote            from 'Quote';
+import ViewHome         from './home';
+import ViewBio          from './bio';
+import ViewContact      from './contact';
+import ViewPortfolio    from './portfolio';
+import ViewProfile      from './profile';
+import ViewSkills       from './skills';
+
+const
+dataMenu = require('data').menu,
+quotes   = require('data').quotes;
 
 class Main extends React.Component {
     render(){

@@ -1,8 +1,7 @@
-var
-React     = require('react'),
-PropTypes = require('prop-types'),
-Icon      = require('Icon'),
-styles    = require('./_style.less');
+import React        from 'react';
+import PropTypes    from 'prop-types';
+import Icon   		from 'Icon';
+import styles       from './_style';
 
 const Portfolio_card = props => {
 	const divStyle = {

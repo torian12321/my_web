@@ -1,5 +1,8 @@
-var
-React = require('react'),
-styles= require('./_style.less');
+// https://codepen.io/christopher4lis/pen/BwQKdR?editors=0010
 
-module.exports = () => <div className="BG" />;
+import React, { Component } from 'react';
+import styles from './_style';
+
+const BG = () => <div className="BG" />
+
+module.exports = BG;
