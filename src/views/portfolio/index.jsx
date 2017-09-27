@@ -1,10 +1,10 @@
-var
-React          = require('react'),
-PropTypes      = require('prop-types'),
-Section        = require('Section'),
-{ Column }     = require('Grid'),
-data           = require('data'),
-Portfolio_card = require('./Portfolio_card.jsx');
+import React        	from 'react';
+import PropTypes    	from 'prop-types';
+import Section   		from 'Section';
+import { Column }		from 'Grid';
+import Portfolio_card	from './Portfolio_card';
+
+const data = require('data');
 
 const Portfolio = props =>(
 	<Section { ...props.sectionConf }>
