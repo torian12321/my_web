@@ -10,9 +10,8 @@ root    = path.join(__dirname, '..'),
 manifest= require('../src/static/manifest');
 
 
-
 module.exports = (outDir, isProd) => {
-  
+
   // base plugins array
   const plugins = [
     new Clean([outDir], { root }),
@@ -78,7 +77,6 @@ module.exports = (outDir, isProd) => {
 			
 		);
 	}
-
 
   return plugins;
 };
