@@ -7,7 +7,7 @@ import styles       from './_style';
 
 const Section = props => (
     <section id={ props.id } className={classNames('section', props.className)} style={props.style}>
-    	{ props.title ? <Title>{ props.title }</Title> : null }
+    	{ props.title && <Title>{ props.title }</Title> }
         <Grid>
             <Row>{ props.children }</Row>
 	    </Grid>

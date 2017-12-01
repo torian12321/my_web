@@ -7,9 +7,8 @@ import styles       from './_style';
 const Wrapper = props => (
     <div className={classNames('styled-input', props.className)}>
         {props.children}
-        {props.label ?
-            <label htmlFor={props.id}>{props.label}</label> :
-            null
+        {props.label &&
+            <label htmlFor={props.id}>{props.label}</label>
         }        
         <span />
     </div>

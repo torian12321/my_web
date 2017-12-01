@@ -7,10 +7,10 @@ const Button = props => (
     <button
         className= {classNames(
             'btn',
-            !props.flat ? 'btn-3D'             : null,
-            props.large ? 'btn-large'          : null,
-            props.color ? `btn-${props.color}` : null,
-            props.type  ? `btn-${props.type}`  : null,
+            !props.flat && 'btn-3D',
+            props.large && 'btn-large',
+            props.color && `btn-${props.color}`,
+            props.type  && `btn-${props.type}`,
             props.className
         )}
         onClick  = {props.onClick}

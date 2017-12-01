@@ -1,9 +1,13 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
+import classNames   from 'classNames';
 
 const Menu_btn = props =>(
-	<div 
-		className= { 'menu-opener ' + (props.isOpen ? 'active' : '') }
+	<div
+		className={classNames(
+			'menu-opener',
+			props.isOpen && ' active'
+		)}
 		onClick  = { props.onClick }
 	>
 	    <div></div>

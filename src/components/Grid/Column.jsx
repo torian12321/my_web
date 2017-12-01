@@ -4,20 +4,20 @@ import classNames   from 'classNames';
 
 const Col = props => (
     <div  className={classNames(
-        props.xs ? `xs-${props.xs}` : null,
-        props.sm ? `sm-${props.sm}` : null,
-        props.md ? `md-${props.md}` : null,
-        props.lg ? `lg-${props.lg}` : null,
+        props.xs && `xs-${props.xs}`,
+        props.sm && `sm-${props.sm}`,
+        props.md && `md-${props.md}`,
+        props.lg && `lg-${props.lg}`,
 
-        props.xs_pull ? `xs-pull-${props.xs_pull}` : null,
-        props.sm_pull ? `sm-pull-${props.sm_pull}` : null,
-        props.md_pull ? `md-pull-${props.md_pull}` : null,
-        props.lg_pull ? `lg-pull-${props.lg_pull}` : null,
+        props.xs_pull && `xs-pull-${props.xs_pull}`,
+        props.sm_pull && `sm-pull-${props.sm_pull}`,
+        props.md_pull && `md-pull-${props.md_pull}`,
+        props.lg_pull && `lg-pull-${props.lg_pull}`,
 
-        props.xs_push ? `xs-push-${props.xs_push}` : null,
-        props.sm_push ? `sm-push-${props.sm_push}` : null,
-        props.md_push ? `md-push-${props.md_push}` : null,
-        props.lg_push ? `lg-push-${props.lg_push}` : null,
+        props.xs_push && `xs-push-${props.xs_push}`,
+        props.sm_push && `sm-push-${props.sm_push}`,
+        props.md_push && `md-push-${props.md_push}`,
+        props.lg_push && `lg-push-${props.lg_push}`,
         
         props.className
     )}>

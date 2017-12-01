@@ -23,8 +23,8 @@ class Menu extends React.Component {
             <div
                 className={classNames(
                     '🍔',
-                    !this.state.isVisible ? ' hidden' : null,
-                    this.state.isOpen     ? ' active' : null
+                    !this.state.isVisible && ' hidden',
+                    this.state.isOpen     && ' active'
                 )}
             >
                 <Menu_btn   isOpen={ this.state.isOpen } onClick={ this.toggleSlide.bind(this) } />

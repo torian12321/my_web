@@ -1,10 +1,11 @@
 import React        	from 'react';
 import PropTypes    	from 'prop-types';
+import classNames   	from 'classNames';
 import Menu_panelOption from './Menu_panelOption';
 import BG_img       	from './menu_header.jpg';
 		
 const Menu_panel = props => (
-    <div className={ 'menu-wrap ' + (props.isOpen ? 'active' : '') }>
+	<div className={classNames('menu-wrap', (props.isOpen && 'active'))}>
 	    <div className="menu-content">
 
 	        <div className="img" style={{ backgroundImage: `url(${props.img})` }}></div>

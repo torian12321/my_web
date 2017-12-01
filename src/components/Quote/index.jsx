@@ -7,7 +7,7 @@ const Quote = props =>(
     <section className="💬">
         <blockquote cite={props.cite}>
             {props.text}
-            {props.author ? <span className="author">{ props.author }</span> : null}
+            {props.author && <span className="author">{ props.author }</span>}
             <Icon className="icon-open"  name="quote" />
             <Icon className="icon-close" name="quote" rotate={180} />
         </blockquote>
