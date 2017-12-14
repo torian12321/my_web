@@ -4,14 +4,12 @@ import { Provider }     from 'react-redux';
 import { createStore }  from 'redux';
 import reducer          from './reducers';
 import Main    	        from './views/Main';
-import scripts	        from './scripts';
-import styles		        from './styles';
+import './scripts';
+import './styles';
 
-//let store = createStore(reducer);
 const store = createStore(
-	reducer, /* preloadedState, */
-	window.devToolsExtension ? window.devToolsExtension() : f => f
-//  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	reducer,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 ReactDOM.render(
