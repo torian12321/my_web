@@ -1,0 +1,45 @@
+export default function() {
+  return [
+    {
+      title    : "Skills",
+      iconClass: "star",
+      skills   : [
+        { level: 5, name: "HTML" },
+        { level: 5, name: "CSS" },
+        { level: 4, name: "ReactJS" },
+        { level: 2, name: "Redux" },
+        { level: 3, name: "Javascript" },
+        { level: 4, name: "Jquery" },
+        { level: 4, name: "Bootstrap" },
+        { level: 2, name: "Angular" },
+        { level: 2, name: "PHP" },
+        { level: 5, name: "LESS" },
+        { level: 4, name: "SASS" },
+        { level: 4, name: "Wordpress" },
+        { level: 3, name: "Git Hub" },
+        { level: 3, name: "MySQL" },
+        { level: 4, name: "AJAX" },
+        { level: 4, name: "JSON" },
+        { level: 4, name: "Gulp" }
+      ]
+    },{
+      title    : "Frameworks",
+      iconClass: "cog",
+      skills   : [
+        { level: 3, name: "Grails" },
+        { level: 3, name: "Netbeans" },
+        { level: 3, name: "Eclipse" },
+        { level: 3, name: "Tomcat" },
+        { level: 1, name: "Unity" }
+      ]
+    },{
+      title    : "Languages",
+      iconClass: "chat",
+      skills   : [
+        { level: 4, name: "English" },
+        { level: 5, name: "Spanish" },
+        { level: 5, name: "Catalan" }
+      ]
+    }
+  ]
+};

@@ -1,31 +1,38 @@
 import React        from 'react';
 import PropTypes    from 'prop-types';
-import Icon   		from 'Icon';
-import Section		from 'Section';
+import { connect }  from 'react-redux';
+import Icon   		  from 'Icon';
+import Section		  from 'Section';
 import styles       from './_style';
 
-const data = require('data');
+class Home extends React.Component {
+  render() {
+    return (
+      <Section id={this.props.sectionConf.id} className="section-main">
 
-const Home = props =>(
-	<Section id={props.sectionConf.id} className="section-main">
-	
-		<div className="title-main">
-		    Aitor<br/>
-		    Palomares
-		    <span>Interactive resume</span>
-		</div>
+        <div className="title-main">
+          Aitor<br/>
+          Palomares
+          <span>Interactive resume</span>
+        </div>
 
-		{ props.gotoLink  ? <a href={"#" + props.gotoLink } className="goDown"><Icon name='down' /></a> : null }
-    </Section>
-);
+        { this.props.gotoLink &&
+          <a href={`#${this.props.gotoLink}`} className="goDown"><Icon name='down' /></a>
+        }
+      </Section>
+    );
+  }
+}
 
 Home.propTypes = {
-	sectionConf : PropTypes.object,
-	gotoLink    : PropTypes.string
+  sectionConf : PropTypes.object,
+  gotoLink    : PropTypes.string
 };
-Home.defaultProps = {
-	sectionConf : data.menu.home,
-    gotoLink    : data.menu.profile.id
-};
+function mapStateToProps(state) {
+  return {
+    sectionConf: state.sections.home,
+    gotoLink   : state.sections.profile.id
+  }
+}
 
-module.exports = Home;
+export default connect(mapStateToProps)(Home);

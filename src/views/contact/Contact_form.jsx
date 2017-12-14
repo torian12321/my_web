@@ -54,7 +54,7 @@ class Contact_form extends React.Component {
     }
     render() {
         return (
-            <Column xs={12} md={6} md_push={6}>
+            <Column md={6} md_push={6}>
             <form
 				onSubmit     = {false}
 				autoComplete = "off">

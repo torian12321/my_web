@@ -9,14 +9,14 @@ const Portfolio_card = props => {
 	};
 
 	return(
-	    <Wrapper 
-	    	className= "c-product"
-	    	style    = { divStyle }
-	    	href     = { props.link }
-	    >
-			{ props.link  ? <div className="link"><Icon name="link" /></div> : null }
-			{ props.title ? <h1>{ props.title }</h1> : null }
-			{ props.desc  ? <span className="desc">{props.desc }</span> : null }
+	  <Wrapper 
+      className= "c-product"
+      style    = { divStyle }
+      href     = { props.link }
+    >
+			{ props.link  && <div className="link"><Icon name="link" /></div> }
+			{ props.title && <h1>{ props.title }</h1> }
+			{ props.desc  && <span className="desc">{ props.desc }</span> }
 		</Wrapper>
 	);
 };

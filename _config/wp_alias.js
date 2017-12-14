@@ -10,7 +10,6 @@ module.exports = {
   manifest : path.resolve(__dirname, '../src/static/manifest.json'),
 
   Main  : path.resolve(__dirname, '../src/views/Main'),
-  data  : path.resolve(__dirname, '../src/data'),
 
   BG     : path.resolve(__dirname, '../src/components/BG'),
   Menu   : path.resolve(__dirname, '../src/components/Menu'),  

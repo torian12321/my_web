@@ -1,26 +1,30 @@
-import React        from 'react';
-import PropTypes    from 'prop-types';
-import Icon         from 'Icon';
-import {Column} 	from 'Grid';
+import React      from 'react';
+import PropTypes  from 'prop-types';
+import Icon       from 'Icon';
+import {Column}   from 'Grid';
 
-const Contact_link = props =>(
-	<Column xs={12} sm={6} md={12} className='c-contact'>
-		<Wrapper link={props.link} htmlFor={props.htmlFor}>
-			<div className='icon-wrapper'>
-				<Icon name={props.icon} />
-			</div>
-			<span>{ props.text }</span>
-		</Wrapper>
-	</Column>
-);
+class Contact_link extends React.PureComponent {
+  render() {
+    return (
+      <Column sm={6} md={12} className='c-contact'>
+        <Wrapper link={this.props.link} htmlFor={this.props.htmlFor}>
+          <div className='icon-wrapper'>
+            <Icon name={this.props.icon} />
+          </div>
+          <span>{this.props.text}</span>
+        </Wrapper>
+      </Column>
+    )
+  }
+}
 
- 
-const Wrapper = props =>(
-	props.link ?
-		<a     href   ={props.link} target= "_blank" >{props.children}</a> :
-		<label htmlFor={props.htmlFor}>{props.children}</label>
-	
-);
+class Wrapper extends React.PureComponent {
+  render() {
+    return this.props.link ?
+      <a     href   ={this.props.link} target= "_blank" >{this.props.children}</a> :
+      <label htmlFor={this.props.htmlFor}>{this.props.children}</label>
+  }
+}
 
 
 Contact_link.propTypes = {
@@ -30,8 +34,8 @@ Contact_link.propTypes = {
 	htmlFor: PropTypes.string
 };
 Contact_link.defaultProps = {
-    icon   : 'mail',
-	htmlFor: 'form-name'
+  icon   : 'mail',
+  htmlFor: 'form-name'
 };
 
 module.exports = Contact_link;

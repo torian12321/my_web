@@ -1,5 +1,6 @@
 import React            from 'react';
 import PropTypes        from 'prop-types';
+import { connect }      from 'react-redux';
 import BG               from 'BG';
 import Menu             from 'Menu';
 import Quote            from 'Quote';
@@ -10,43 +11,46 @@ import ViewPortfolio    from './portfolio';
 import ViewProfile      from './profile';
 import ViewSkills       from './skills';
 
-const
-dataMenu = require('data').menu,
-quotes   = require('data').quotes;
-
 class Main extends React.Component {
-    render(){
-        return (
-            <div>
-                <BG />
+  render() {
+    return (
+      <div>
+        <BG />
+        <Menu 
+          items={[
+            this.props.sections.home,
+            this.props.sections.profile,
+            this.props.sections.biography,
+            this.props.sections.skills,
+            this.props.sections.portfolio,
+            this.props.sections.contact,
+        ]}/>
 
-                <Menu 
-                items={[
-                    dataMenu.home,
-                    dataMenu.profile,
-                    dataMenu.biography,
-                    dataMenu.skills,
-                    dataMenu.portfolio,
-                    dataMenu.contact,    
-                ]}/>
-                
-                <ViewHome />
-                <ViewProfile />
-            	
-                <Quote {...quotes[0]} />
-                <ViewBio />
+        <ViewHome />
+        <ViewProfile />
 
-                <Quote {...quotes[1]} />
-                <ViewSkills />
-                
-                <Quote {...quotes[2]} />
-                <ViewPortfolio />
+        <Quote {...this.props.quotes[0]} />
+        <ViewBio />
 
-                <Quote {...quotes[3]} />
-                <ViewContact />
-            </div>
-        );
-    }
+        <Quote {...this.props.quotes[1]} />
+        <ViewSkills />
+
+        <Quote {...this.props.quotes[2]} />
+        <ViewPortfolio />
+
+        <Quote {...this.props.quotes[3]} />
+        <ViewContact />
+      </div>
+    );
+  }
 }
 
-module.exports = Main;
+
+function mapStateToProps(state) {
+  return {
+    sections: state.sections,
+    quotes  : state.quotes
+  }
+}
+
+export default connect(mapStateToProps)(Main);
