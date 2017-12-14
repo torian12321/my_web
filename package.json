@@ -10,10 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run watch",
-    "build": "cross-env NODE_ENV=development webpack",
-    "build:prod": "cross-env NODE_ENV=production  webpack --progress -p",
-    "build:dist": "npm run build:prod",
+    "start": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --hot --host 0.0.0.0",
+    "build": "cross-env NODE_ENV=production  webpack --progress -p",
     "check-updates": "node _config/updatePackages",
     "watch": "cross-env NODE_ENV=development webpack --watch",
     "styleguide": "cross-env NODE_ENV=development styleguidist server",

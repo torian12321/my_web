@@ -10,11 +10,10 @@ root    = path.join(__dirname, '..'),
 manifest= require('../src/static/manifest');
 
 
-module.exports = (outDir, isProd) => {
+module.exports = (isProd) => {
 
   // base plugins array
   const plugins = [
-    new Clean([outDir], { root }),
     new Copy([{ context: './src/static/', from: '**/*.*' }]),
     new HTML({
       template: path.resolve(__dirname, '../src/index.ejs'),
@@ -36,6 +35,7 @@ module.exports = (outDir, isProd) => {
   // prod only
   if (isProd) {
 		plugins.push(
+      new Clean([path.resolve(__dirname, '../dist')], { root }),
       new webpack.optimize.ModuleConcatenationPlugin(),
       new ExtractText('styles.[hash].css'),
       new webpack.LoaderOptionsPlugin({
