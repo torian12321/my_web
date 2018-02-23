@@ -1,9 +1,9 @@
-import React		        from 'react';
-import ReactDOM	        from 'react-dom';
+import React            from 'react';
+import ReactDOM         from 'react-dom';
 import { Provider }     from 'react-redux';
 import { createStore }  from 'redux';
 import reducer          from './reducers';
-import Main    	        from './views/Main';
+import Main             from './views/Main';
 import './scripts';
 import './styles';
 
