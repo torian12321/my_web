@@ -1,0 +1,44 @@
+$red: red;
+$white: white;
+
+.🍔 {
+  font-size: 50px;
+
+  background: $red;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+
+  div {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 60%;
+    background: $white;
+    border-radius: 10px;
+    opacity: 1;
+    left: 20%;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    transform-origin: left center;
+
+    &:nth-child(1) {
+      top: 30%;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      top: 70%;
+    }
+  }
+  &--isOpen {
+    background: red;
+  }
+}
