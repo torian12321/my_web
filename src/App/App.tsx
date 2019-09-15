@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Quote, Section } from "../components/ui";
+import { Menu, Quote, Section, Icon } from "../components/ui";
 import {
   SectionBio,
   SectionContact,
@@ -13,6 +13,7 @@ const App: React.FC = () => (
   <div>
     <Menu />
 
+    <Icon name="cog" rotate={40} />
     <SectionHome />
     <SectionProfile />
 
