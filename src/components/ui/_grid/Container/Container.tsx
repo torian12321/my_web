@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { IContainer } from "./Container.interfaces";
-import styles from "./Row.module.scss";
+import styles from "./Container.module.scss";
 
 const Container = ({ children, className }: IContainer) => (
   <div className={classNames(styles.container, className)}>{children}</div>
