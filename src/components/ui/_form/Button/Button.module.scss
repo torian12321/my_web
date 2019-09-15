@@ -1,0 +1,66 @@
+// @import "assets/styles/abstracts/index.scss";
+
+// Vars
+$btn_mainColor: red; //$themeColor-1;
+$btn_secColor: white; //$white;
+
+// Block
+.btn {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 2.5;
+  min-height: 2.5em;
+  padding: 0 1.2em;
+  outline: none;
+  text-align: center;
+  background: $btn_mainColor;
+  color: $btn_secColor;
+  // border: $border-style $border-width $btn_mainColor;
+  // border-radius: $border-radius;
+  cursor: pointer;
+  // @include transition(background);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: lighten($btn_mainColor, 5);
+  }
+
+  // Elements
+  // &_spinner {
+  //   font-size: 0.8em;
+  //   display: inline-block;
+  //   margin-left: 1em;
+  // }
+
+  // Modifiers
+  &__hasCaption {
+  }
+  &__isLoading {
+  }
+
+  &:disabled,
+  &__disabled {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.btnGroup {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+
+  .btn {
+    display: inline;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
