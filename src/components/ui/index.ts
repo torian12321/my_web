@@ -5,3 +5,4 @@ export { Avatar } from "./Avatar";
 export { Heading } from "./Heading";
 export { Menu } from "./Menu";
 export { Quote } from "./Quote";
+export { Section } from "./Section";
