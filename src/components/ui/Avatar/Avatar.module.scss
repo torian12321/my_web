@@ -1,0 +1,17 @@
+// @import '~LESS_conf';
+
+$avatar_color-main: purple;
+
+.avatar {
+  font-size: 250px;
+  height: 1em;
+  width: 1em;
+  border: $avatar_color-main 0.04em solid;
+  background: $avatar_color-main bottom center no-repeat;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  // .background-cover();
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,11 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
-import { Menu } from "components/ui";
+import { Avatar, Menu, Quote } from "components/ui";
 import "./App.css";
 
 const App: React.FC = () => {
   return (
     <div className="App">
+      <Quote caption="bla bla" />
+      <Avatar src="http://placeimg.com/200/200/people" />
       <Menu />
 
       <header className="App-header">
