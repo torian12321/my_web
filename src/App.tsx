@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
-import { Menu } from "./components/ui";
+import { Menu } from "components/ui";
 import "./App.css";
 
 const App: React.FC = () => {
