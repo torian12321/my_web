@@ -30,7 +30,7 @@
     "react": "16.0.0",
     "react-classnames": "0.1.2",
     "react-css-modules": "4.7.1",
-    "react-dom": "16.0.0",
+    "react-dom": "16.11.0",
     "react-motion": "0.5.2",
     "react-smooth-scroll": "0.1.0",
     "react-styleguidist": "6.0.31",
